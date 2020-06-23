@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testCases.addToCartWithLogin">
+        <methods>
+          <include name="setupSuite"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="TC02_add_To_Cart"/>
+          <include name="endSuite"/>
+          <include name="setUpDriver"/>
+          <include name="TC01_loginTest"/>
+        </methods>
+      </class> <!-- testCases.addToCartWithLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
