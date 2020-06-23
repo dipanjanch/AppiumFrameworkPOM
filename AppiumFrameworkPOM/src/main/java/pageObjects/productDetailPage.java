@@ -20,6 +20,11 @@ import jdk.internal.org.jline.utils.Log;
 import utility.baseFunctionalities;
 import utility.log;
 
+/**
+ * the productDetailPage class contains all the productDetailPage elements and functions associated with them
+ * @author Dipanjan
+ *
+ */
 public class productDetailPage extends baseFunctionalities{
 	AndroidDriver<AndroidElement> driver;
 	public static String CompanyNameProductDeatilPage;

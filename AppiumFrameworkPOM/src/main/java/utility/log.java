@@ -2,7 +2,11 @@ package utility;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+/**
+ * the log class contains all the important functions  for logging 
+ * @author Dipanjan
+ *
+ */
 public class log {
 
 //Initialize Log4j logs
@@ -15,14 +19,9 @@ private static Logger Log = LogManager.getLogger(log.class.getName());
  */
 
 public static void startTestCase(String sTestCaseName){
-
 Log.info("****************************************************************************************");
-
 Log.info("$$$$$$$$$$$$$$$$$$$$$                 "+sTestCaseName+ "       $$$$$$$$$$$$$$$$$$$$$$$$$");
-
 Log.info("****************************************************************************************");
-
-
 }
 
 /**
@@ -31,10 +30,7 @@ Log.info("**********************************************************************
  */
 
 public static void endTestCase(String sTestCaseName){
-
 Log.info("XXXXXXXXXXXXXXXXXXXXXXX             "+"-E---N---D-"+"             XXXXXXXXXXXXXXXXXXXXXX");
-
-
 }
 
 /**

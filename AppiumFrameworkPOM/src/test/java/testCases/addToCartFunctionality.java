@@ -24,7 +24,11 @@ import utility.baseFunctionalities;
 import utility.log;
 import utility.utilities;
 import pageObjects.homePage;
-
+/**
+ * the addToCartFunctionality class contains the test case which will skip login and test the add-to-cart functionality
+ * @author Dipanjan
+ *
+ */
 public class addToCartFunctionality  extends baseFunctionalities {
 	
 	public addToCartFunctionality() throws IOException {

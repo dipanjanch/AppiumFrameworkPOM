@@ -21,6 +21,11 @@ import io.appium.java_client.touch.offset.PointOption;
 import utility.baseFunctionalities;
 import utility.log;
 
+/**
+ * the homePage class contains all the homepage elements and functions associated with them
+ * @author Dipanjan
+ *
+ */
 public class homePage extends baseFunctionalities {
 	AndroidDriver<AndroidElement> driver;
 	public static String CompanyNameProductList;

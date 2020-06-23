@@ -21,7 +21,11 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.PointOption;
 
 
-
+/**
+ * the utilities class contains all the important functions like data access etc 
+ * @author Dipanjan
+ *
+ */
 public class utilities {
 	AndroidDriver<AndroidElement>  driver;
 

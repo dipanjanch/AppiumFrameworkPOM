@@ -17,6 +17,11 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utility.baseFunctionalities;
 import utility.log;
 
+/**
+ * the loginPage class contains all the loginPage elements and functions associated with them
+ * @author Dipanjan
+ *
+ */
 public class loginPage extends baseFunctionalities {
 	AndroidDriver<AndroidElement> driver;
 	/**

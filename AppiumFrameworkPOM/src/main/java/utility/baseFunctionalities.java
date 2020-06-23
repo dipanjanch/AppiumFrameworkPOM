@@ -52,6 +52,11 @@ import pageObjects.loginPage;
 import pageObjects.productDetailPage;
 import pageObjects.homePage;
 
+/**
+ * the baseFunctionalities class contains all the important functions  for all testcases 
+ * @author Dipanjan
+ *
+ */
 public class baseFunctionalities {
 
 	 public static AppiumDriverLocalService service;
@@ -87,6 +92,11 @@ public class baseFunctionalities {
 		 
 	 }
 	 
+	 /**
+	  * This is the After Suite method which runs at the end of the suite and deletes the session
+	  * @throws InterruptedException
+	  * @throws IOException
+	  */
 	 @AfterSuite
 	 public void endSuite() throws InterruptedException, IOException 
 	 {

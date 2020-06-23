@@ -11,7 +11,11 @@ import utility.baseFunctionalities;
 import utility.log;
 
 
-
+/**
+ * the addToCartWithLogin class contains the test case which will login and test the add-to-cart functionality
+ * @author Dipanjan
+ *
+ */
 public class addToCartWithLogin extends baseFunctionalities {
 	
 	public addToCartWithLogin() throws IOException {
