@@ -1,821 +1,142 @@
-2020-06-26 18:58:52:284 [Appium] Welcome to Appium v1.12.1
-2020-06-26 18:58:52:285 [Appium] Non-default server args:
-2020-06-26 18:58:52:286 [Appium]   logFile: /Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/src/test/resources/logs/logResult.txt
-2020-06-26 18:58:52:286 [Appium]   localTimezone: true
-2020-06-26 18:58:52:303 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
-2020-06-26 18:58:52:447 [HTTP] --> GET /wd/hub/status
-2020-06-26 18:58:52:447 [HTTP] {}
-2020-06-26 18:58:52:449 [GENERIC] Calling AppiumDriver.getStatus() with args: []
-2020-06-26 18:58:52:450 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.12.1"}}
-2020-06-26 18:58:52:454 [HTTP] <-- GET /wd/hub/status 200 5 ms - 68
-2020-06-26 18:58:52:454 [HTTP] 
-2020-06-26 18:58:52:695 [HTTP] --> POST /wd/hub/session
-2020-06-26 18:58:52:696 [HTTP] {"desiredCapabilities":{"appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","newCommandTimeout":14,"automationName":"uiautomator2","platformName":"Android","udid":"c88df41a","deviceName":"PocoF1"},"capabilities":{"firstMatch":[{"appium:appActivity":"com.amazon.mShop.home.HomeActivity","appium:appPackage":"com.amazon.mShop.android.shopping","appium:automationName":"uiautomator2","appium:deviceName":"PocoF1","appium:newCommandTimeout":14,"platformName":"android","appium:udid":"c88df41a"}]}}
-2020-06-26 18:58:52:696 [W3C] Calling AppiumDriver.createSession() with args: [{"appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","newCommandTimeout":14,"automationName":"uiautomator2","platformName":"Android","udid":"c88df41a","deviceName":"PocoF1"},null,{"firstMatch":[{"appium:appActivity":"com.amazon.mShop.home.HomeActivity","appium:appPackage":"com.amazon.mShop.android.shopping","appium:automationName":"uiautomator2","appium:deviceName":"PocoF1","appium:newCommandTimeout":14,"platformName":"android","appium:udid":"c88df41a"}]}]
-2020-06-26 18:58:52:696 [BaseDriver] Event 'newSessionRequested' logged at 1593178132696 (18:58:52 GMT+0530 (India Standard Time))
-2020-06-26 18:58:52:867 [Appium] Appium v1.12.1 creating new AndroidUiautomator2Driver (v1.33.0) session
-2020-06-26 18:58:52:867 [Appium] Capabilities:
-2020-06-26 18:58:52:868 [Appium]   platformName: android
-2020-06-26 18:58:52:868 [Appium]   appActivity: com.amazon.mShop.home.HomeActivity
-2020-06-26 18:58:52:868 [Appium]   appPackage: com.amazon.mShop.android.shopping
-2020-06-26 18:58:52:868 [Appium]   automationName: uiautomator2
-2020-06-26 18:58:52:868 [Appium]   deviceName: PocoF1
-2020-06-26 18:58:52:869 [Appium]   newCommandTimeout: 14
-2020-06-26 18:58:52:869 [Appium]   udid: c88df41a
-2020-06-26 18:58:52:871 [BaseDriver] W3C capabilities {"alwaysMatch":{"platformNa... and MJSONWP desired capabilities {"appActivity":"com.amazon.... were provided
-2020-06-26 18:58:52:871 [BaseDriver] Creating session with W3C capabilities: {"alwaysMatch":{"platformNa...
-2020-06-26 18:58:52:876 [BaseDriver] Session created with session id: 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:58:52:928 [ADB] Checking whether adb is present
-2020-06-26 18:58:52:931 [ADB] Found 1 'build-tools' folders under '/Users/di20020072/Library/Android/sdk' (newest first):
-2020-06-26 18:58:52:931 [ADB]     /Users/di20020072/Library/Android/sdk/build-tools/29.0.2
-2020-06-26 18:58:52:932 [ADB] Using adb from /Users/di20020072/Library/Android/sdk/platform-tools/adb
-2020-06-26 18:58:52:932 [AndroidDriver] Retrieving device list
-2020-06-26 18:58:52:932 [ADB] Trying to find a connected android device
-2020-06-26 18:58:52:932 [ADB] Getting connected devices...
-2020-06-26 18:58:52:950 [ADB] 1 device(s) connected
-2020-06-26 18:58:52:950 [AndroidDriver] Using device: c88df41a
-2020-06-26 18:58:52:951 [ADB] Setting device id to c88df41a
-2020-06-26 18:58:52:952 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell getprop ro.build.version.sdk'
-2020-06-26 18:58:53:030 [ADB] Current device property 'ro.build.version.sdk': 29
-2020-06-26 18:58:53:031 [ADB] Device API level: 29
-2020-06-26 18:58:53:031 [UiAutomator2] Relaxing hidden api policy
-2020-06-26 18:58:53:032 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings put global hidden_api_policy_pre_p_apps 1'
-2020-06-26 18:58:53:124 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings put global hidden_api_policy_p_apps 1'
-2020-06-26 18:58:53:236 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings put global hidden_api_policy 1'
-2020-06-26 18:58:53:325 [AndroidDriver] No app sent in, not parsing package/activity
-2020-06-26 18:58:53:326 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a wait-for-device'
-2020-06-26 18:58:53:339 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell echo ping'
-2020-06-26 18:58:53:390 [AndroidDriver] Pushing settings apk to device...
-2020-06-26 18:58:53:391 [ADB] Getting install status for io.appium.settings
-2020-06-26 18:58:53:391 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.settings'
-2020-06-26 18:58:53:504 [ADB] 'io.appium.settings' is installed
-2020-06-26 18:58:53:505 [ADB] Getting package info for 'io.appium.settings'
-2020-06-26 18:58:53:505 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.settings'
-2020-06-26 18:58:53:623 [ADB] Checking whether aapt is present
-2020-06-26 18:58:53:625 [ADB] Using aapt from /Users/di20020072/Library/Android/sdk/build-tools/29.0.2/aapt
-2020-06-26 18:58:53:652 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('2.14.0' >= '2.14.0')
-2020-06-26 18:58:53:653 [ADB] There is no need to install/upgrade '/usr/local/lib/node_modules/appium/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
-2020-06-26 18:58:53:653 [ADB] Getting IDs of all 'io.appium.settings' processes
-2020-06-26 18:58:53:654 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell 'pgrep --help; echo $?''
-2020-06-26 18:58:53:750 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pgrep -f \^io\\.appium\\.settings\$'
-2020-06-26 18:58:53:873 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
-2020-06-26 18:58:53:874 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell appops set io.appium.settings android\:mock_location allow'
-2020-06-26 18:58:53:984 [Logcat] Starting logcat capture
-2020-06-26 18:58:54:059 [ADB] Getting install status for io.appium.uiautomator2.server
-2020-06-26 18:58:54:059 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.uiautomator2.server'
-2020-06-26 18:58:54:125 [ADB] 'io.appium.uiautomator2.server' is installed
-2020-06-26 18:58:54:126 [ADB] Getting package info for 'io.appium.uiautomator2.server'
-2020-06-26 18:58:54:126 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.uiautomator2.server'
-2020-06-26 18:58:54:211 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('3.4.0' >= '3.4.0')
-2020-06-26 18:58:54:211 [UiAutomator2] io.appium.uiautomator2.server installation state: sameVersionInstalled
-2020-06-26 18:58:54:211 [ADB] Checking app cert for /usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk
-2020-06-26 18:58:54:213 [ADB] Using apksigner from /Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner
-2020-06-26 18:58:54:213 [ADB] Starting '/Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner' with args '["verify","--print-certs","/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk"]'
-2020-06-26 18:58:54:588 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
-2020-06-26 18:58:54:588 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
-2020-06-26 18:58:54:588 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
-2020-06-26 18:58:54:588 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
-2020-06-26 18:58:54:588 [ADB] 
-2020-06-26 18:58:54:589 [ADB] '/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk' is already signed.
-2020-06-26 18:58:54:589 [ADB] Getting install status for io.appium.uiautomator2.server.test
-2020-06-26 18:58:54:589 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.uiautomator2.server.test'
-2020-06-26 18:58:54:658 [ADB] 'io.appium.uiautomator2.server.test' is installed
-2020-06-26 18:58:54:658 [ADB] Checking app cert for /usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
-2020-06-26 18:58:54:659 [ADB] Starting '/Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner' with args '["verify","--print-certs","/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk"]'
-2020-06-26 18:58:54:934 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
-2020-06-26 18:58:54:934 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
-2020-06-26 18:58:54:934 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
-2020-06-26 18:58:54:934 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
-2020-06-26 18:58:54:934 [ADB] 
-2020-06-26 18:58:54:934 [ADB] '/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is already signed.
-2020-06-26 18:58:54:934 [UiAutomator2] Server packages are not going to be (re)installed
-2020-06-26 18:58:54:935 [UiAutomator2] Waiting up to 30000ms for services to be available
-2020-06-26 18:58:54:935 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pm list instrumentation'
-2020-06-26 18:58:55:005 [UiAutomator2] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
-2020-06-26 18:58:55:005 [UiAutomator2] Forwarding UiAutomator2 Server port 6790 to 8200
-2020-06-26 18:58:55:006 [ADB] Forwarding system: 8200 to device: 6790
-2020-06-26 18:58:55:006 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a forward tcp\:8200 tcp\:6790'
-2020-06-26 18:58:55:015 [UiAutomator2] No app capability. Assuming it is already on the device
-2020-06-26 18:58:55:015 [ADB] Getting install status for com.amazon.mShop.android.shopping
-2020-06-26 18:58:55:015 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package com.amazon.mShop.android.shopping'
-2020-06-26 18:58:55:081 [ADB] 'com.amazon.mShop.android.shopping' is installed
-2020-06-26 18:58:55:081 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell am force-stop com.amazon.mShop.android.shopping'
-2020-06-26 18:58:55:166 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pm clear com.amazon.mShop.android.shopping'
-2020-06-26 18:58:55:307 [AndroidDriver] Performed fast reset on the installed 'com.amazon.mShop.android.shopping' application (stop and clear)
-2020-06-26 18:58:55:307 [UiAutomator2] Performing shallow cleanup of automation leftovers
-2020-06-26 18:58:55:329 [UiAutomator2] No obsolete sessions have been detected (Error: socket hang up)
-2020-06-26 18:58:55:329 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell am force-stop io.appium.uiautomator2.server.test'
-2020-06-26 18:58:55:389 [UiAutomator2] Starting UIAutomator2 server 3.4.0
-2020-06-26 18:58:55:389 [UiAutomator2] Using UIAutomator2 server from '/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk' and test from '/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
-2020-06-26 18:58:55:389 [UiAutomator2] Waiting up to 30000ms for UiAutomator2 to be online...
-2020-06-26 18:58:55:390 [ADB] Creating ADB subprocess with args: ["-P",5037,"-s","c88df41a","shell","am","instrument","-w","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
-2020-06-26 18:58:56:398 [WD Proxy] Matched '/status' to command name 'getStatus'
-2020-06-26 18:58:56:400 [WD Proxy] Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
-2020-06-26 18:58:56:423 [WD Proxy] Got an unexpected response: {"code":"ECONNRESET"}
-2020-06-26 18:58:56:612 [Instrumentation] io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
-2020-06-26 18:58:57:430 [WD Proxy] Matched '/status' to command name 'getStatus'
-2020-06-26 18:58:57:431 [WD Proxy] Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
-2020-06-26 18:58:57:445 [WD Proxy] Got an unexpected response: {"code":"ECONNRESET"}
-2020-06-26 18:58:58:452 [WD Proxy] Matched '/status' to command name 'getStatus'
-2020-06-26 18:58:58:452 [WD Proxy] Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
-2020-06-26 18:58:58:566 [WD Proxy] Got response with status 200: "{\"sessionId\":\"None\",\"status\":0,\"value\":\"Status Invoked\"}"
-2020-06-26 18:58:58:567 [UiAutomator2] The initialization of the instrumentation process took 3178ms
-2020-06-26 18:58:58:567 [WD Proxy] Matched '/session' to command name 'createSession'
-2020-06-26 18:58:58:568 [WD Proxy] Proxying [POST /session] to [POST http://localhost:8200/wd/hub/session] with body: {"desiredCapabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a"}}
-2020-06-26 18:58:58:607 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":"Created Session"}
-2020-06-26 18:58:58:615 [WD Proxy] Proxying [GET /appium/device/info] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/appium/device/info] with no body
-2020-06-26 18:58:58:660 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{\"androidId\":\"0a6d040a55b745d4\",\"manufacturer\":\"Xiaomi\",\"model\":\"POCO F1\",\"brand\":\"Xiaomi\",\"apiVersion\":\"29\",\"platformVersion\":\"10\",\"carrierName\":\"Jio 4G\",\"realDisplaySize\":\"1080x2246\",\"displayDensity\":440}}"
-2020-06-26 18:58:58:661 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys window'
-2020-06-26 18:58:58:751 [AndroidDriver] Screen already unlocked, doing nothing
-2020-06-26 18:58:58:752 [UiAutomator2] UiAutomator2 did not start the activity we were waiting for, 'com.amazon.mShop.android.shopping/com.amazon.mShop.home.HomeActivity'. Starting it ourselves
-2020-06-26 18:58:58:752 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell am start -W -n com.amazon.mShop.android.shopping/com.amazon.mShop.home.HomeActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
-2020-06-26 18:58:59:920 [WD Proxy] Proxying [GET /appium/device/pixel_ratio] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/appium/device/pixel_ratio] with body: {}
-2020-06-26 18:58:59:932 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":2.75}"
-2020-06-26 18:58:59:934 [WD Proxy] Matched '/appium/device/system_bars' to command name 'getSystemBars'
-2020-06-26 18:58:59:934 [WD Proxy] Proxying [GET /appium/device/system_bars] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/appium/device/system_bars] with body: {}
-2020-06-26 18:58:59:946 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{\"statusBar\":89}}"
-2020-06-26 18:58:59:947 [WD Proxy] Matched '/window/current/size' to command name 'getWindowSize'
-2020-06-26 18:58:59:947 [WD Proxy] Proxying [GET /window/current/size] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/window/current/size] with body: {}
-2020-06-26 18:58:59:958 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{\"height\":2027,\"width\":1080}}"
-2020-06-26 18:58:59:958 [Appium] New AndroidUiautomator2Driver session created successfully, session 3ddd36f7-d656-496c-9eae-281431007109 added to master session list
-2020-06-26 18:58:59:959 [BaseDriver] Event 'newSessionStarted' logged at 1593178139959 (18:58:59 GMT+0530 (India Standard Time))
-2020-06-26 18:58:59:960 [W3C (3ddd36f7)] Cached the protocol value 'W3C' for the new session 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:58:59:961 [W3C (3ddd36f7)] Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}}
-2020-06-26 18:58:59:962 [HTTP] <-- POST /wd/hub/session 200 7266 ms - 1004
-2020-06-26 18:58:59:962 [HTTP] 
-2020-06-26 18:58:59:994 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:58:59:994 [HTTP] {}
-2020-06-26 18:58:59:995 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:005 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:005 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:006 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:015 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:015 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:016 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 22 ms - 936
-2020-06-26 18:59:00:016 [HTTP] 
-2020-06-26 18:59:00:021 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:021 [HTTP] {}
-2020-06-26 18:59:00:021 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:022 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:022 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:022 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:030 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:031 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:031 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 11 ms - 936
-2020-06-26 18:59:00:032 [HTTP] 
-2020-06-26 18:59:00:038 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/timeouts
-2020-06-26 18:59:00:038 [HTTP] {"implicit":10000}
-2020-06-26 18:59:00:039 [W3C (3ddd36f7)] Calling AppiumDriver.timeouts() with args: [null,null,null,null,10000,"3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:040 [BaseDriver] W3C timeout argument: {"implicit":10000}}
-2020-06-26 18:59:00:041 [BaseDriver] Set implicit wait to 10000ms
-2020-06-26 18:59:00:041 [W3C (3ddd36f7)] Responding to client with driver.timeouts() result: null
-2020-06-26 18:59:00:041 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/timeouts 200 3 ms - 14
-2020-06-26 18:59:00:041 [HTTP] 
-2020-06-26 18:59:00:045 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/timeouts
-2020-06-26 18:59:00:045 [HTTP] {"implicit":10000}
-2020-06-26 18:59:00:046 [W3C (3ddd36f7)] Calling AppiumDriver.timeouts() with args: [null,null,null,null,10000,"3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:047 [BaseDriver] W3C timeout argument: {"implicit":10000}}
-2020-06-26 18:59:00:047 [BaseDriver] Set implicit wait to 10000ms
-2020-06-26 18:59:00:048 [W3C (3ddd36f7)] Responding to client with driver.timeouts() result: null
-2020-06-26 18:59:00:048 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/timeouts 200 3 ms - 14
-2020-06-26 18:59:00:048 [HTTP] 
-2020-06-26 18:59:00:058 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:058 [HTTP] {}
-2020-06-26 18:59:00:058 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:059 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:059 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:059 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:067 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:068 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:068 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 10 ms - 936
-2020-06-26 18:59:00:068 [HTTP] 
-2020-06-26 18:59:00:070 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:071 [HTTP] {}
-2020-06-26 18:59:00:071 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:072 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:072 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:072 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:087 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:087 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:088 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 17 ms - 936
-2020-06-26 18:59:00:088 [HTTP] 
-2020-06-26 18:59:00:202 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:202 [HTTP] {}
-2020-06-26 18:59:00:202 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:203 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:203 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:204 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:212 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:213 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:213 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 12 ms - 936
-2020-06-26 18:59:00:214 [HTTP] 
-2020-06-26 18:59:00:216 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:216 [HTTP] {}
-2020-06-26 18:59:00:216 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:217 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:217 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:217 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:229 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:230 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:230 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 14 ms - 936
-2020-06-26 18:59:00:230 [HTTP] 
-2020-06-26 18:59:00:246 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:246 [HTTP] {}
-2020-06-26 18:59:00:246 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:247 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:247 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:248 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:264 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:265 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:265 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 19 ms - 936
-2020-06-26 18:59:00:265 [HTTP] 
-2020-06-26 18:59:00:267 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:267 [HTTP] {}
-2020-06-26 18:59:00:268 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:268 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:269 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:269 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:285 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:286 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:287 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 19 ms - 936
-2020-06-26 18:59:00:287 [HTTP] 
-2020-06-26 18:59:00:313 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:00:313 [HTTP] {}
-2020-06-26 18:59:00:313 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:314 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:00:314 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:00:315 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:00:328 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:00:329 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:00:329 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 17 ms - 936
-2020-06-26 18:59:00:329 [HTTP] 
-2020-06-26 18:59:00:336 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:00:336 [HTTP] {"using":"id","value":"com.amazon.mShop.android.shopping:id/skip_sign_in_button"}
-2020-06-26 18:59:00:338 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["id","com.amazon.mShop.android.shopping:id/skip_sign_in_button","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:00:339 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:00:339 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:00:341 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:00:341 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/skip_sign_in_button","context":"","multiple":false}
-2020-06-26 18:59:01:389 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:01:389 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:01:390 [BaseDriver] Waited for 1051 ms so far
-2020-06-26 18:59:01:890 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:01:891 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/skip_sign_in_button","context":"","multiple":false}
-2020-06-26 18:59:01:953 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"e0ff0cfd-7f36-4561-a959-5d6334569bdd"}}
-2020-06-26 18:59:01:954 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"e0ff0cfd-7f36-4561-a959-5d6334569bdd","ELEMENT":"e0ff0cfd-7f36-4561-a959-5d6334569bdd"}
-2020-06-26 18:59:01:954 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 1618 ms - 137
-2020-06-26 18:59:01:955 [HTTP] 
-2020-06-26 18:59:01:959 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/e0ff0cfd-7f36-4561-a959-5d6334569bdd/click
-2020-06-26 18:59:01:959 [HTTP] {"id":"e0ff0cfd-7f36-4561-a959-5d6334569bdd"}
-2020-06-26 18:59:01:960 [W3C (3ddd36f7)] Calling AppiumDriver.click() with args: ["e0ff0cfd-7f36-4561-a959-5d6334569bdd","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:01:963 [WD Proxy] Matched '/element/e0ff0cfd-7f36-4561-a959-5d6334569bdd/click' to command name 'click'
-2020-06-26 18:59:01:963 [WD Proxy] Proxying [POST /element/e0ff0cfd-7f36-4561-a959-5d6334569bdd/click] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/e0ff0cfd-7f36-4561-a959-5d6334569bdd/click] with body: {"element":"e0ff0cfd-7f36-4561-a959-5d6334569bdd"}
-2020-06-26 18:59:04:246 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":true}
-2020-06-26 18:59:04:247 [W3C (3ddd36f7)] Responding to client with driver.click() result: true
-2020-06-26 18:59:04:247 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/e0ff0cfd-7f36-4561-a959-5d6334569bdd/click 200 2288 ms - 14
-2020-06-26 18:59:04:248 [HTTP] 
-2020-06-26 18:59:04:259 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:04:260 [HTTP] {}
-2020-06-26 18:59:04:260 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:04:261 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:04:261 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:04:261 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:04:288 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:04:288 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:04:289 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 30 ms - 936
-2020-06-26 18:59:04:289 [HTTP] 
-2020-06-26 18:59:04:293 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:04:294 [HTTP] {"using":"id","value":"com.amazon.mShop.android.shopping:id/rs_search_src_text"}
-2020-06-26 18:59:04:294 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["id","com.amazon.mShop.android.shopping:id/rs_search_src_text","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:04:295 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:04:295 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:04:296 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:04:296 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/rs_search_src_text","context":"","multiple":false}
-2020-06-26 18:59:04:951 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"4b2b6ed5-8e7e-49f4-9c51-3565080c9568"}}
-2020-06-26 18:59:04:951 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"4b2b6ed5-8e7e-49f4-9c51-3565080c9568","ELEMENT":"4b2b6ed5-8e7e-49f4-9c51-3565080c9568"}
-2020-06-26 18:59:04:952 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 658 ms - 137
-2020-06-26 18:59:04:952 [HTTP] 
-2020-06-26 18:59:04:954 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/4b2b6ed5-8e7e-49f4-9c51-3565080c9568/displayed
-2020-06-26 18:59:04:955 [HTTP] {}
-2020-06-26 18:59:04:956 [W3C (3ddd36f7)] Calling AppiumDriver.elementDisplayed() with args: ["4b2b6ed5-8e7e-49f4-9c51-3565080c9568","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:04:958 [WD Proxy] Matched '/element/4b2b6ed5-8e7e-49f4-9c51-3565080c9568/attribute/displayed' to command name 'getAttribute'
-2020-06-26 18:59:04:958 [WD Proxy] Proxying [GET /element/4b2b6ed5-8e7e-49f4-9c51-3565080c9568/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/4b2b6ed5-8e7e-49f4-9c51-3565080c9568/attribute/displayed] with body: {}
-2020-06-26 18:59:04:994 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"true\"}"
-2020-06-26 18:59:04:995 [W3C (3ddd36f7)] Responding to client with driver.elementDisplayed() result: true
-2020-06-26 18:59:04:995 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/4b2b6ed5-8e7e-49f4-9c51-3565080c9568/displayed 200 41 ms - 14
-2020-06-26 18:59:04:995 [HTTP] 
-2020-06-26 18:59:04:997 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:04:997 [HTTP] {}
-2020-06-26 18:59:04:997 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:04:998 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:04:998 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:04:999 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:05:018 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:05:019 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:05:020 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 23 ms - 936
-2020-06-26 18:59:05:020 [HTTP] 
-2020-06-26 18:59:05:024 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:05:025 [HTTP] {"using":"id","value":"com.amazon.mShop.android.shopping:id/rs_search_src_text"}
-2020-06-26 18:59:05:025 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["id","com.amazon.mShop.android.shopping:id/rs_search_src_text","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:05:026 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:05:026 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:05:027 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:05:027 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/rs_search_src_text","context":"","multiple":false}
-2020-06-26 18:59:05:114 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"79d9304a-b302-49e7-b661-e701512386f9"}}
-2020-06-26 18:59:05:115 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"79d9304a-b302-49e7-b661-e701512386f9","ELEMENT":"79d9304a-b302-49e7-b661-e701512386f9"}
-2020-06-26 18:59:05:116 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 91 ms - 137
-2020-06-26 18:59:05:116 [HTTP] 
-2020-06-26 18:59:05:122 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/79d9304a-b302-49e7-b661-e701512386f9/click
-2020-06-26 18:59:05:122 [HTTP] {"id":"79d9304a-b302-49e7-b661-e701512386f9"}
-2020-06-26 18:59:05:123 [W3C (3ddd36f7)] Calling AppiumDriver.click() with args: ["79d9304a-b302-49e7-b661-e701512386f9","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:05:124 [WD Proxy] Matched '/element/79d9304a-b302-49e7-b661-e701512386f9/click' to command name 'click'
-2020-06-26 18:59:05:124 [WD Proxy] Proxying [POST /element/79d9304a-b302-49e7-b661-e701512386f9/click] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/79d9304a-b302-49e7-b661-e701512386f9/click] with body: {"element":"79d9304a-b302-49e7-b661-e701512386f9"}
-2020-06-26 18:59:05:236 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":true}
-2020-06-26 18:59:05:236 [W3C (3ddd36f7)] Responding to client with driver.click() result: true
-2020-06-26 18:59:05:237 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/79d9304a-b302-49e7-b661-e701512386f9/click 200 115 ms - 14
-2020-06-26 18:59:05:237 [HTTP] 
-2020-06-26 18:59:05:239 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:05:240 [HTTP] {}
-2020-06-26 18:59:05:240 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:05:241 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:05:241 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:05:241 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:05:252 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:05:253 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:05:253 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 14 ms - 936
-2020-06-26 18:59:05:253 [HTTP] 
-2020-06-26 18:59:05:257 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:05:257 [HTTP] {"using":"xpath","value":"\t//android.widget.ImageView[@content-desc=\"Visa\"]"}
-2020-06-26 18:59:05:258 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","\t//android.widget.ImageView[@content-desc=\"Visa\"]","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:05:259 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:05:259 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:05:259 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:05:260 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"\t//android.widget.ImageView[@content-desc=\"Visa\"]","context":"","multiple":false}
-2020-06-26 18:59:05:542 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:05:543 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:05:543 [BaseDriver] Waited for 284 ms so far
-2020-06-26 18:59:06:047 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:06:048 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"\t//android.widget.ImageView[@content-desc=\"Visa\"]","context":"","multiple":false}
-2020-06-26 18:59:06:721 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"994f2f9b-2272-406a-af30-7d4aaa9eddf6"}}
-2020-06-26 18:59:06:722 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"994f2f9b-2272-406a-af30-7d4aaa9eddf6","ELEMENT":"994f2f9b-2272-406a-af30-7d4aaa9eddf6"}
-2020-06-26 18:59:06:723 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 1465 ms - 137
-2020-06-26 18:59:06:723 [HTTP] 
-2020-06-26 18:59:06:725 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/994f2f9b-2272-406a-af30-7d4aaa9eddf6/displayed
-2020-06-26 18:59:06:725 [HTTP] {}
-2020-06-26 18:59:06:726 [W3C (3ddd36f7)] Calling AppiumDriver.elementDisplayed() with args: ["994f2f9b-2272-406a-af30-7d4aaa9eddf6","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:06:727 [WD Proxy] Matched '/element/994f2f9b-2272-406a-af30-7d4aaa9eddf6/attribute/displayed' to command name 'getAttribute'
-2020-06-26 18:59:06:727 [WD Proxy] Proxying [GET /element/994f2f9b-2272-406a-af30-7d4aaa9eddf6/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/994f2f9b-2272-406a-af30-7d4aaa9eddf6/attribute/displayed] with body: {}
-2020-06-26 18:59:06:766 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"true\"}"
-2020-06-26 18:59:06:767 [W3C (3ddd36f7)] Responding to client with driver.elementDisplayed() result: true
-2020-06-26 18:59:06:767 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/994f2f9b-2272-406a-af30-7d4aaa9eddf6/displayed 200 42 ms - 14
-2020-06-26 18:59:06:767 [HTTP] 
-2020-06-26 18:59:06:769 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:06:769 [HTTP] {}
-2020-06-26 18:59:06:769 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:06:770 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:06:771 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:06:771 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:06:799 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:06:800 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:06:801 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 32 ms - 936
-2020-06-26 18:59:06:801 [HTTP] 
-2020-06-26 18:59:06:805 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:06:806 [HTTP] {"using":"xpath","value":"\t//android.widget.ImageView[@content-desc=\"Visa\"]"}
-2020-06-26 18:59:06:806 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","\t//android.widget.ImageView[@content-desc=\"Visa\"]","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:06:807 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:06:807 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:06:808 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:06:808 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"\t//android.widget.ImageView[@content-desc=\"Visa\"]","context":"","multiple":false}
-2020-06-26 18:59:06:884 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"7d848ac7-e115-475d-92b4-ae3c4a0ddca1"}}
-2020-06-26 18:59:06:884 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"7d848ac7-e115-475d-92b4-ae3c4a0ddca1","ELEMENT":"7d848ac7-e115-475d-92b4-ae3c4a0ddca1"}
-2020-06-26 18:59:06:885 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 80 ms - 137
-2020-06-26 18:59:06:886 [HTTP] 
-2020-06-26 18:59:06:888 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/7d848ac7-e115-475d-92b4-ae3c4a0ddca1/displayed
-2020-06-26 18:59:06:888 [HTTP] {}
-2020-06-26 18:59:06:888 [W3C (3ddd36f7)] Calling AppiumDriver.elementDisplayed() with args: ["7d848ac7-e115-475d-92b4-ae3c4a0ddca1","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:06:890 [WD Proxy] Matched '/element/7d848ac7-e115-475d-92b4-ae3c4a0ddca1/attribute/displayed' to command name 'getAttribute'
-2020-06-26 18:59:06:890 [WD Proxy] Proxying [GET /element/7d848ac7-e115-475d-92b4-ae3c4a0ddca1/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/7d848ac7-e115-475d-92b4-ae3c4a0ddca1/attribute/displayed] with body: {}
-2020-06-26 18:59:06:930 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"true\"}"
-2020-06-26 18:59:06:930 [W3C (3ddd36f7)] Responding to client with driver.elementDisplayed() result: true
-2020-06-26 18:59:06:931 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/7d848ac7-e115-475d-92b4-ae3c4a0ddca1/displayed 200 43 ms - 14
-2020-06-26 18:59:06:931 [HTTP] 
-2020-06-26 18:59:06:933 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/window/rect
-2020-06-26 18:59:06:933 [HTTP] {}
-2020-06-26 18:59:06:939 [W3C (3ddd36f7)] Calling AppiumDriver.getWindowRect() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:06:940 [WD Proxy] Matched '/window/current/size' to command name 'getWindowSize'
-2020-06-26 18:59:06:940 [WD Proxy] Proxying [GET /window/current/size] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/window/current/size] with body: {}
-2020-06-26 18:59:06:967 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{\"height\":2027,\"width\":1080}}"
-2020-06-26 18:59:06:968 [W3C (3ddd36f7)] Responding to client with driver.getWindowRect() result: {"width":1080,"height":2027,"x":0,"y":0}
-2020-06-26 18:59:06:969 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/window/rect 200 36 ms - 50
-2020-06-26 18:59:06:969 [HTTP] 
-2020-06-26 18:59:06:977 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/touch/perform
-2020-06-26 18:59:06:977 [HTTP] {"actions":[{"action":"tap","options":{"x":540,"y":1013}}]}
-2020-06-26 18:59:06:978 [W3C (3ddd36f7)] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":540,"y":1013}}],"3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:06:985 [WD Proxy] Proxying [POST /appium/tap] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/appium/tap] with body: {"x":540,"y":1013}
-2020-06-26 18:59:07:300 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":true}
-2020-06-26 18:59:07:301 [W3C (3ddd36f7)] Responding to client with driver.performTouch() result: null
-2020-06-26 18:59:07:301 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/touch/perform 200 324 ms - 14
-2020-06-26 18:59:07:302 [HTTP] 
-2020-06-26 18:59:07:303 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:07:303 [HTTP] {}
-2020-06-26 18:59:07:304 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:07:305 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:07:305 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:07:305 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:07:326 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:07:327 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:07:327 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 24 ms - 936
-2020-06-26 18:59:07:328 [HTTP] 
-2020-06-26 18:59:07:332 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:07:332 [HTTP] {"using":"id","value":"com.amazon.mShop.android.shopping:id/rs_search_src_text"}
-2020-06-26 18:59:07:332 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["id","com.amazon.mShop.android.shopping:id/rs_search_src_text","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:07:333 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:07:334 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:07:334 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:07:334 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/rs_search_src_text","context":"","multiple":false}
-2020-06-26 18:59:07:719 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"7cce403a-af0f-46c0-a179-da23163fecfe"}}
-2020-06-26 18:59:07:719 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"7cce403a-af0f-46c0-a179-da23163fecfe","ELEMENT":"7cce403a-af0f-46c0-a179-da23163fecfe"}
-2020-06-26 18:59:07:720 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 388 ms - 137
-2020-06-26 18:59:07:720 [HTTP] 
-2020-06-26 18:59:07:724 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/7cce403a-af0f-46c0-a179-da23163fecfe/clear
-2020-06-26 18:59:07:724 [HTTP] {"id":"7cce403a-af0f-46c0-a179-da23163fecfe"}
-2020-06-26 18:59:07:725 [W3C (3ddd36f7)] Calling AppiumDriver.clear() with args: ["7cce403a-af0f-46c0-a179-da23163fecfe","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:07:726 [WD Proxy] Matched '/element/7cce403a-af0f-46c0-a179-da23163fecfe/clear' to command name 'clear'
-2020-06-26 18:59:07:726 [WD Proxy] Proxying [POST /element/7cce403a-af0f-46c0-a179-da23163fecfe/clear] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/7cce403a-af0f-46c0-a179-da23163fecfe/clear] with body: {"elementId":"7cce403a-af0f-46c0-a179-da23163fecfe"}
-2020-06-26 18:59:07:785 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":"Element Cleared"}
-2020-06-26 18:59:07:785 [W3C (3ddd36f7)] Responding to client with driver.clear() result: "Element Cleared"
-2020-06-26 18:59:07:786 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/7cce403a-af0f-46c0-a179-da23163fecfe/clear 200 62 ms - 27
-2020-06-26 18:59:07:786 [HTTP] 
-2020-06-26 18:59:07:788 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:07:788 [HTTP] {}
-2020-06-26 18:59:07:788 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:07:789 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:07:790 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:07:790 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:07:814 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:07:815 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:07:816 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 27 ms - 936
-2020-06-26 18:59:07:816 [HTTP] 
-2020-06-26 18:59:07:820 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:07:820 [HTTP] {"using":"id","value":"com.amazon.mShop.android.shopping:id/rs_search_src_text"}
-2020-06-26 18:59:07:821 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["id","com.amazon.mShop.android.shopping:id/rs_search_src_text","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:07:822 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:07:822 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:07:823 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:07:823 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/rs_search_src_text","context":"","multiple":false}
-2020-06-26 18:59:08:937 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"bdae456f-6b41-4eea-9d1a-486815acb049"}}
-2020-06-26 18:59:08:938 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"bdae456f-6b41-4eea-9d1a-486815acb049","ELEMENT":"bdae456f-6b41-4eea-9d1a-486815acb049"}
-2020-06-26 18:59:08:939 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 1119 ms - 137
-2020-06-26 18:59:08:939 [HTTP] 
-2020-06-26 18:59:08:946 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/bdae456f-6b41-4eea-9d1a-486815acb049/value
-2020-06-26 18:59:08:946 [HTTP] {"id":"bdae456f-6b41-4eea-9d1a-486815acb049","text":"65-inch TV","value":["6","5","-","i","n","c","h"," ","T","V"]}
-2020-06-26 18:59:08:947 [W3C (3ddd36f7)] Calling AppiumDriver.setValue() with args: [["6","5","-","i","n","c","h"," ","T","V"],"bdae456f-6b41-4eea-9d1a-486815acb049","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:08:950 [WD Proxy] Matched '/element/bdae456f-6b41-4eea-9d1a-486815acb049/value' to command name 'setValue'
-2020-06-26 18:59:08:951 [Protocol Converter] Added 'value' property ["6","5","-","i","n","c","h"," ","T","V"] to 'setValue' request body
-2020-06-26 18:59:08:951 [WD Proxy] Proxying [POST /element/bdae456f-6b41-4eea-9d1a-486815acb049/value] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/bdae456f-6b41-4eea-9d1a-486815acb049/value] with body: {"elementId":"bdae456f-6b41-4eea-9d1a-486815acb049","text":"65-inch TV","replace":false,"value":["6","5","-","i","n","c","h"," ","T","V"]}
-2020-06-26 18:59:09:708 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":""}
-2020-06-26 18:59:09:709 [W3C (3ddd36f7)] Responding to client with driver.setValue() result: ""
-2020-06-26 18:59:09:710 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/bdae456f-6b41-4eea-9d1a-486815acb049/value 200 764 ms - 12
-2020-06-26 18:59:09:710 [HTTP] 
-2020-06-26 18:59:09:722 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/appium/device/press_keycode
-2020-06-26 18:59:09:722 [HTTP] {"keycode":66}
-2020-06-26 18:59:09:723 [W3C (3ddd36f7)] Calling AppiumDriver.pressKeyCode() with args: [66,null,null,null,null,"3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:09:729 [WD Proxy] Matched '/appium/device/press_keycode' to command name 'pressKeyCode'
-2020-06-26 18:59:09:729 [WD Proxy] Proxying [POST /appium/device/press_keycode] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/appium/device/press_keycode] with body: {"keycode":66,"metastate":null,"flags":null}
-2020-06-26 18:59:11:443 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":true}
-2020-06-26 18:59:11:443 [W3C (3ddd36f7)] Responding to client with driver.pressKeyCode() result: true
-2020-06-26 18:59:11:445 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/appium/device/press_keycode 200 1722 ms - 14
-2020-06-26 18:59:11:445 [HTTP] 
-2020-06-26 18:59:11:447 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:11:447 [HTTP] {}
-2020-06-26 18:59:11:449 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:11:450 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:11:450 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:11:450 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:11:478 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:11:479 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:11:480 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 32 ms - 936
-2020-06-26 18:59:11:480 [HTTP] 
-2020-06-26 18:59:11:484 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:11:484 [HTTP] {"using":"xpath","value":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/\tandroid.widget.TextView"}
-2020-06-26 18:59:11:485 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/\tandroid.widget.TextView","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:11:486 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:11:486 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:11:487 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:11:487 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/\tandroid.widget.TextView","context":"","multiple":false}
-2020-06-26 18:59:12:925 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"ac36c471-3133-48dc-b622-1cec098dbf9b"}}
-2020-06-26 18:59:12:925 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"ac36c471-3133-48dc-b622-1cec098dbf9b","ELEMENT":"ac36c471-3133-48dc-b622-1cec098dbf9b"}
-2020-06-26 18:59:12:926 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 1442 ms - 137
-2020-06-26 18:59:12:927 [HTTP] 
-2020-06-26 18:59:12:928 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/ac36c471-3133-48dc-b622-1cec098dbf9b/text
-2020-06-26 18:59:12:928 [HTTP] {}
-2020-06-26 18:59:12:929 [W3C (3ddd36f7)] Driver proxy active, passing request on via HTTP proxy
-2020-06-26 18:59:12:931 [WD Proxy] Matched '/wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/ac36c471-3133-48dc-b622-1cec098dbf9b/text' to command name 'getText'
-2020-06-26 18:59:12:931 [WD Proxy] Proxying [GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/ac36c471-3133-48dc-b622-1cec098dbf9b/text] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/ac36c471-3133-48dc-b622-1cec098dbf9b/text] with body: {}
-2020-06-26 18:59:13:004 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"by Samsung\"}"
-2020-06-26 18:59:13:004 [WD Proxy] Replacing sessionId 6c7a2d6f-eab2-4102-b6c5-54e57a75190b with 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:13:005 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/ac36c471-3133-48dc-b622-1cec098dbf9b/text 200 77 ms - 84
-2020-06-26 18:59:13:006 [HTTP] 
-2020-06-26 18:59:13:008 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:13:008 [HTTP] {}
-2020-06-26 18:59:13:008 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:13:009 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:13:010 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:13:010 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:13:033 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:13:034 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:13:035 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 27 ms - 936
-2020-06-26 18:59:13:036 [HTTP] 
-2020-06-26 18:59:13:039 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:13:039 [HTTP] {"using":"xpath","value":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]"}
-2020-06-26 18:59:13:040 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:13:041 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:13:041 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:13:042 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:13:042 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]","context":"","multiple":false}
-2020-06-26 18:59:13:506 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"d066119e-781d-4970-8607-bf946343a29a"}}
-2020-06-26 18:59:13:507 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"d066119e-781d-4970-8607-bf946343a29a","ELEMENT":"d066119e-781d-4970-8607-bf946343a29a"}
-2020-06-26 18:59:13:507 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 468 ms - 137
-2020-06-26 18:59:13:508 [HTTP] 
-2020-06-26 18:59:13:509 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/d066119e-781d-4970-8607-bf946343a29a/text
-2020-06-26 18:59:13:512 [HTTP] {}
-2020-06-26 18:59:13:512 [W3C (3ddd36f7)] Driver proxy active, passing request on via HTTP proxy
-2020-06-26 18:59:13:513 [WD Proxy] Matched '/wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/d066119e-781d-4970-8607-bf946343a29a/text' to command name 'getText'
-2020-06-26 18:59:13:514 [WD Proxy] Proxying [GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/d066119e-781d-4970-8607-bf946343a29a/text] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/d066119e-781d-4970-8607-bf946343a29a/text] with body: {}
-2020-06-26 18:59:13:548 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"Samsung 163 cm (65 Inches) Wondertainment Series Ultra HD LED Smart TV UA65TUE60AKXXL (Titan Gray) (2020 model)\"}"
-2020-06-26 18:59:13:548 [WD Proxy] Replacing sessionId 6c7a2d6f-eab2-4102-b6c5-54e57a75190b with 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:13:549 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/d066119e-781d-4970-8607-bf946343a29a/text 200 39 ms - 185
-2020-06-26 18:59:13:549 [HTTP] 
-2020-06-26 18:59:13:552 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:13:552 [HTTP] {}
-2020-06-26 18:59:13:553 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:13:554 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:13:554 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:13:554 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:13:576 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:13:576 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:13:577 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 25 ms - 936
-2020-06-26 18:59:13:577 [HTTP] 
-2020-06-26 18:59:13:581 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:13:581 [HTTP] {"using":"xpath","value":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/\tandroid.widget.TextView"}
-2020-06-26 18:59:13:581 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/\tandroid.widget.TextView","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:13:582 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:13:582 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:13:583 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:13:583 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/\tandroid.widget.TextView","context":"","multiple":false}
-2020-06-26 18:59:14:018 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"48e879f7-6dd8-4e6e-9398-a51a92b6ad94"}}
-2020-06-26 18:59:14:019 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"48e879f7-6dd8-4e6e-9398-a51a92b6ad94","ELEMENT":"48e879f7-6dd8-4e6e-9398-a51a92b6ad94"}
-2020-06-26 18:59:14:020 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 439 ms - 137
-2020-06-26 18:59:14:020 [HTTP] 
-2020-06-26 18:59:14:022 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/48e879f7-6dd8-4e6e-9398-a51a92b6ad94/text
-2020-06-26 18:59:14:022 [HTTP] {}
-2020-06-26 18:59:14:023 [W3C (3ddd36f7)] Driver proxy active, passing request on via HTTP proxy
-2020-06-26 18:59:14:024 [WD Proxy] Matched '/wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/48e879f7-6dd8-4e6e-9398-a51a92b6ad94/text' to command name 'getText'
-2020-06-26 18:59:14:024 [WD Proxy] Proxying [GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/48e879f7-6dd8-4e6e-9398-a51a92b6ad94/text] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/48e879f7-6dd8-4e6e-9398-a51a92b6ad94/text] with body: {}
-2020-06-26 18:59:14:057 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"₹89,999 ₹1,29,900\"}"
-2020-06-26 18:59:14:057 [WD Proxy] Replacing sessionId 6c7a2d6f-eab2-4102-b6c5-54e57a75190b with 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:14:058 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/48e879f7-6dd8-4e6e-9398-a51a92b6ad94/text 200 36 ms - 95
-2020-06-26 18:59:14:058 [HTTP] 
-2020-06-26 18:59:14:060 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:14:061 [HTTP] {}
-2020-06-26 18:59:14:061 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:14:062 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:14:062 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:14:062 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:14:085 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:14:086 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:14:086 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 26 ms - 936
-2020-06-26 18:59:14:086 [HTTP] 
-2020-06-26 18:59:14:091 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:14:091 [HTTP] {"using":"xpath","value":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]"}
-2020-06-26 18:59:14:091 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:14:092 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:14:092 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:14:093 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:14:093 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]","context":"","multiple":false}
-2020-06-26 18:59:14:469 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"6cdf933f-3911-4176-823b-f330c1ddd0e2"}}
-2020-06-26 18:59:14:470 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"6cdf933f-3911-4176-823b-f330c1ddd0e2","ELEMENT":"6cdf933f-3911-4176-823b-f330c1ddd0e2"}
-2020-06-26 18:59:14:471 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 380 ms - 137
-2020-06-26 18:59:14:471 [HTTP] 
-2020-06-26 18:59:14:474 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/6cdf933f-3911-4176-823b-f330c1ddd0e2/click
-2020-06-26 18:59:14:474 [HTTP] {"id":"6cdf933f-3911-4176-823b-f330c1ddd0e2"}
-2020-06-26 18:59:14:475 [W3C (3ddd36f7)] Calling AppiumDriver.click() with args: ["6cdf933f-3911-4176-823b-f330c1ddd0e2","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:14:476 [WD Proxy] Matched '/element/6cdf933f-3911-4176-823b-f330c1ddd0e2/click' to command name 'click'
-2020-06-26 18:59:14:476 [WD Proxy] Proxying [POST /element/6cdf933f-3911-4176-823b-f330c1ddd0e2/click] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/6cdf933f-3911-4176-823b-f330c1ddd0e2/click] with body: {"element":"6cdf933f-3911-4176-823b-f330c1ddd0e2"}
-2020-06-26 18:59:16:948 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":true}
-2020-06-26 18:59:16:948 [W3C (3ddd36f7)] Responding to client with driver.click() result: true
-2020-06-26 18:59:16:949 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/6cdf933f-3911-4176-823b-f330c1ddd0e2/click 200 2475 ms - 14
-2020-06-26 18:59:16:949 [HTTP] 
-2020-06-26 18:59:16:952 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:16:952 [HTTP] {}
-2020-06-26 18:59:16:952 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:16:953 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:16:954 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:16:954 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:16:978 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:16:979 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:16:980 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 28 ms - 936
-2020-06-26 18:59:16:980 [HTTP] 
-2020-06-26 18:59:16:984 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:16:984 [HTTP] {"using":"id","value":"com.amazon.mShop.android.shopping:id/loc_ux_gps_enter_pincode"}
-2020-06-26 18:59:16:985 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["id","com.amazon.mShop.android.shopping:id/loc_ux_gps_enter_pincode","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:16:986 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:16:986 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:16:986 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:16:987 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"id","selector":"com.amazon.mShop.android.shopping:id/loc_ux_gps_enter_pincode","context":"","multiple":false}
-2020-06-26 18:59:17:029 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"b681d968-325f-48bd-8e5a-ed99c0f8f2e6"}}
-2020-06-26 18:59:17:030 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"b681d968-325f-48bd-8e5a-ed99c0f8f2e6","ELEMENT":"b681d968-325f-48bd-8e5a-ed99c0f8f2e6"}
-2020-06-26 18:59:17:031 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 47 ms - 137
-2020-06-26 18:59:17:031 [HTTP] 
-2020-06-26 18:59:17:033 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/b681d968-325f-48bd-8e5a-ed99c0f8f2e6/displayed
-2020-06-26 18:59:17:033 [HTTP] {}
-2020-06-26 18:59:17:033 [W3C (3ddd36f7)] Calling AppiumDriver.elementDisplayed() with args: ["b681d968-325f-48bd-8e5a-ed99c0f8f2e6","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:17:034 [WD Proxy] Matched '/element/b681d968-325f-48bd-8e5a-ed99c0f8f2e6/attribute/displayed' to command name 'getAttribute'
-2020-06-26 18:59:17:034 [WD Proxy] Proxying [GET /element/b681d968-325f-48bd-8e5a-ed99c0f8f2e6/attribute/displayed] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/b681d968-325f-48bd-8e5a-ed99c0f8f2e6/attribute/displayed] with body: {}
-2020-06-26 18:59:17:060 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"true\"}"
-2020-06-26 18:59:17:061 [W3C (3ddd36f7)] Responding to client with driver.elementDisplayed() result: true
-2020-06-26 18:59:17:061 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/b681d968-325f-48bd-8e5a-ed99c0f8f2e6/displayed 200 29 ms - 14
-2020-06-26 18:59:17:062 [HTTP] 
-2020-06-26 18:59:17:067 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/window/rect
-2020-06-26 18:59:17:068 [HTTP] {}
-2020-06-26 18:59:17:069 [W3C (3ddd36f7)] Calling AppiumDriver.getWindowRect() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:17:070 [WD Proxy] Matched '/window/current/size' to command name 'getWindowSize'
-2020-06-26 18:59:17:070 [WD Proxy] Proxying [GET /window/current/size] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/window/current/size] with body: {}
-2020-06-26 18:59:17:089 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{\"height\":2027,\"width\":1080}}"
-2020-06-26 18:59:17:090 [W3C (3ddd36f7)] Responding to client with driver.getWindowRect() result: {"width":1080,"height":2027,"x":0,"y":0}
-2020-06-26 18:59:17:091 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/window/rect 200 24 ms - 50
-2020-06-26 18:59:17:091 [HTTP] 
-2020-06-26 18:59:17:095 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/touch/perform
-2020-06-26 18:59:17:095 [HTTP] {"actions":[{"action":"tap","options":{"x":540,"y":1013}}]}
-2020-06-26 18:59:17:095 [W3C (3ddd36f7)] Calling AppiumDriver.performTouch() with args: [[{"action":"tap","options":{"x":540,"y":1013}}],"3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:17:100 [WD Proxy] Proxying [POST /appium/tap] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/appium/tap] with body: {"x":540,"y":1013}
-2020-06-26 18:59:17:248 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":true}
-2020-06-26 18:59:17:248 [W3C (3ddd36f7)] Responding to client with driver.performTouch() result: null
-2020-06-26 18:59:17:249 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/touch/perform 200 154 ms - 14
-2020-06-26 18:59:17:249 [HTTP] 
-2020-06-26 18:59:17:251 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:17:251 [HTTP] {}
-2020-06-26 18:59:17:251 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:17:252 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:17:252 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:17:252 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:17:269 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:17:270 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:17:271 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 20 ms - 936
-2020-06-26 18:59:17:271 [HTTP] 
-2020-06-26 18:59:17:275 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:17:275 [HTTP] {"using":"xpath","value":"//android.view.View[@resource-id='bylineInfo']/\tandroid.widget.TextView"}
-2020-06-26 18:59:17:275 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","//android.view.View[@resource-id='bylineInfo']/\tandroid.widget.TextView","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:17:276 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:17:276 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:17:277 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:17:277 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='bylineInfo']/\tandroid.widget.TextView","context":"","multiple":false}
-2020-06-26 18:59:19:153 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"e50a101a-27f1-42b1-8fbe-67471af56d34"}}
-2020-06-26 18:59:19:154 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"e50a101a-27f1-42b1-8fbe-67471af56d34","ELEMENT":"e50a101a-27f1-42b1-8fbe-67471af56d34"}
-2020-06-26 18:59:19:155 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 1879 ms - 137
-2020-06-26 18:59:19:155 [HTTP] 
-2020-06-26 18:59:19:156 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/e50a101a-27f1-42b1-8fbe-67471af56d34/text
-2020-06-26 18:59:19:157 [HTTP] {}
-2020-06-26 18:59:19:157 [W3C (3ddd36f7)] Driver proxy active, passing request on via HTTP proxy
-2020-06-26 18:59:19:158 [WD Proxy] Matched '/wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/e50a101a-27f1-42b1-8fbe-67471af56d34/text' to command name 'getText'
-2020-06-26 18:59:19:159 [WD Proxy] Proxying [GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/e50a101a-27f1-42b1-8fbe-67471af56d34/text] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/e50a101a-27f1-42b1-8fbe-67471af56d34/text] with body: {}
-2020-06-26 18:59:19:184 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"Samsung\"}"
-2020-06-26 18:59:19:184 [WD Proxy] Replacing sessionId 6c7a2d6f-eab2-4102-b6c5-54e57a75190b with 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:19:184 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/e50a101a-27f1-42b1-8fbe-67471af56d34/text 200 28 ms - 81
-2020-06-26 18:59:19:185 [HTTP] 
-2020-06-26 18:59:19:188 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:19:188 [HTTP] {}
-2020-06-26 18:59:19:188 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:19:189 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:19:190 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:19:190 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:19:221 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:19:222 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:19:223 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 35 ms - 936
-2020-06-26 18:59:19:223 [HTTP] 
-2020-06-26 18:59:19:227 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:19:227 [HTTP] {"using":"xpath","value":"//android.view.View[@resource-id='title_feature_div']/android.view.View"}
-2020-06-26 18:59:19:228 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","//android.view.View[@resource-id='title_feature_div']/android.view.View","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:19:228 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:19:229 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:19:229 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:19:229 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='title_feature_div']/android.view.View","context":"","multiple":false}
-2020-06-26 18:59:22:455 [WD Proxy] Got response with status 200: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":0,"value":{"ELEMENT":"9121f99c-f212-4e2c-b111-78be1534e584"}}
-2020-06-26 18:59:22:456 [W3C (3ddd36f7)] Responding to client with driver.findElement() result: {"element-6066-11e4-a52e-4f735466cecf":"9121f99c-f212-4e2c-b111-78be1534e584","ELEMENT":"9121f99c-f212-4e2c-b111-78be1534e584"}
-2020-06-26 18:59:22:456 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 200 3229 ms - 137
-2020-06-26 18:59:22:457 [HTTP] 
-2020-06-26 18:59:22:458 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/9121f99c-f212-4e2c-b111-78be1534e584/text
-2020-06-26 18:59:22:458 [HTTP] {}
-2020-06-26 18:59:22:459 [W3C (3ddd36f7)] Driver proxy active, passing request on via HTTP proxy
-2020-06-26 18:59:22:460 [WD Proxy] Matched '/wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/9121f99c-f212-4e2c-b111-78be1534e584/text' to command name 'getText'
-2020-06-26 18:59:22:460 [WD Proxy] Proxying [GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/9121f99c-f212-4e2c-b111-78be1534e584/text] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element/9121f99c-f212-4e2c-b111-78be1534e584/text] with body: {}
-2020-06-26 18:59:26:429 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"Samsung 163 cm (65 Inches) Wondertainment Series Ultra HD LED Smart TV UA65TUE60AKXXL (Titan Gray) (2020 model)\"}"
-2020-06-26 18:59:26:430 [WD Proxy] Replacing sessionId 6c7a2d6f-eab2-4102-b6c5-54e57a75190b with 3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:26:430 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element/9121f99c-f212-4e2c-b111-78be1534e584/text 200 3972 ms - 185
-2020-06-26 18:59:26:431 [HTTP] 
-2020-06-26 18:59:26:432 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:26:433 [HTTP] {}
-2020-06-26 18:59:26:435 [W3C (3ddd36f7)] Calling AppiumDriver.getSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:26:436 [UiAutomator2] Getting session details from server to mix in
-2020-06-26 18:59:26:436 [WD Proxy] Matched '/' to command name 'getSession'
-2020-06-26 18:59:26:436 [WD Proxy] Proxying [GET /] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with body: {}
-2020-06-26 18:59:26:467 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":{}}"
-2020-06-26 18:59:26:468 [W3C (3ddd36f7)] Responding to client with driver.getSession() result: {"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"PocoF1","newCommandTimeout":14,"udid":"c88df41a"},"platformName":"android","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","automationName":"uiautomator2","deviceName":"c88df41a","newCommandTimeout":14,"udid":"c88df41a","deviceUDID":"c88df41a","deviceApiLevel":29,"platformVersion":"10","deviceScreenSize":"1080x2246","deviceScreenDensity":440,"deviceModel":"POCO F1","deviceManufacturer":"Xiaomi","pixelRatio":2.75,"statBarHeight":89,"viewportRect":{"left":0,"top":89,"width":1080,"height":1938}}
-2020-06-26 18:59:26:469 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 36 ms - 936
-2020-06-26 18:59:26:469 [HTTP] 
-2020-06-26 18:59:26:473 [HTTP] --> POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element
-2020-06-26 18:59:26:473 [HTTP] {"using":"xpath","value":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText"}
-2020-06-26 18:59:26:473 [W3C (3ddd36f7)] Calling AppiumDriver.findElement() with args: ["xpath","//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:26:474 [BaseDriver] Valid locator strategies for this request: xpath, id, class name, accessibility id, -android uiautomator
-2020-06-26 18:59:26:474 [BaseDriver] Waiting up to 10000 ms for condition
-2020-06-26 18:59:26:475 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:26:475 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:27:053 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:27:054 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:27:054 [BaseDriver] Waited for 579 ms so far
-2020-06-26 18:59:27:560 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:27:561 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:28:191 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:28:191 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:28:191 [BaseDriver] Waited for 1716 ms so far
-2020-06-26 18:59:28:696 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:28:696 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:29:629 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:29:629 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:29:630 [BaseDriver] Waited for 3155 ms so far
-2020-06-26 18:59:30:136 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:30:136 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:30:699 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:30:699 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:30:700 [BaseDriver] Waited for 4224 ms so far
-2020-06-26 18:59:31:205 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:31:205 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:31:685 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:31:686 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:31:686 [BaseDriver] Waited for 5211 ms so far
-2020-06-26 18:59:32:191 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:32:191 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:32:663 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:32:664 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:32:664 [BaseDriver] Waited for 6189 ms so far
-2020-06-26 18:59:33:168 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:33:169 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:33:647 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:33:648 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:33:648 [BaseDriver] Waited for 7173 ms so far
-2020-06-26 18:59:34:154 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:34:154 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:34:708 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:34:708 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:34:708 [BaseDriver] Waited for 8233 ms so far
-2020-06-26 18:59:35:210 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:35:211 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:35:781 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:35:781 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:35:781 [BaseDriver] Waited for 9306 ms so far
-2020-06-26 18:59:36:283 [WD Proxy] Matched '/element' to command name 'findElement'
-2020-06-26 18:59:36:283 [WD Proxy] Proxying [POST /element] to [POST http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/element] with body: {"strategy":"xpath","selector":"//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/\tandroid.widget.EditText","context":"","multiple":false}
-2020-06-26 18:59:36:707 [WD Proxy] Got an unexpected response: {"sessionId":"6c7a2d6f-eab2-4102-b6c5-54e57a75190b","status":7,"value":"An element could not be located on the page using the given search parameters."}
-2020-06-26 18:59:36:707 [MJSONWP] Matched JSONWP error code 7 to NoSuchElementError
-2020-06-26 18:59:36:710 [W3C (3ddd36f7)] Encountered internal error running command: NoSuchElementError: An element could not be located on the page using the given search parameters.
-2020-06-26 18:59:36:710 [W3C (3ddd36f7)]     at AndroidUiautomator2Driver.helpers.findElOrEls (/usr/local/lib/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
-2020-06-26 18:59:36:710 [HTTP] <-- POST /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/element 404 10237 ms - 395
-2020-06-26 18:59:36:711 [HTTP] 
-2020-06-26 18:59:36:734 [HTTP] --> GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/screenshot
-2020-06-26 18:59:36:734 [HTTP] {}
-2020-06-26 18:59:36:734 [W3C (3ddd36f7)] Calling AppiumDriver.getScreenshot() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:36:735 [WD Proxy] Matched '/screenshot' to command name 'getScreenshot'
-2020-06-26 18:59:36:735 [WD Proxy] Proxying [GET /screenshot] to [GET http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b/screenshot] with no body
-2020-06-26 18:59:37:905 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"iVBORw0KGgoAAAANSUhEUgAABDgAAAjGCAYAAAAEKH6SAAAAAXNSR0IArs4c6QAAAARzQklUCAgI\\nCHwIZIgAACAASURBVHic7N15WJTl\\/gbw+52NZYBhB2EAEUQRBBUUEbfU3JfSNPWolZq\\/ytOi5fG0\\nnbTs5OnkklpZaWnZopad3LfUMvddxAVBlEURkX2f7fcHMTrOwi6O3J\\/r8rqcd33eEcZ57\\/f7PI8A\\nQAciIiIiIiIiIismauoGEBERERERERHVFwMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIi\\nq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIis\\nHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6\\nDDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox\\n4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eA\\ng4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMO\\nIiIiIiIiIrJ6DDiIiIiIiIiIyOpJmroBREREREREZCwoKAjdu3dHXFwcLl26hAULFtz3NkgkEnTs\\n2BHR0dEICgpCUFAQfH19IZfLIZfLIRKJUFRUhOLiYmRmZiI5ORnJyck4efIkjh8\\/jvLy8vve5poK\\nCwvD6NGjERYWBoVCgbCwsKZukkUJCQnIz89HQkIC1q9fj4SEhKZu0gNHAKBr...
-2020-06-26 18:59:37:917 [W3C (3ddd36f7)] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABDgAAAjGCAYAAAAEKH6SAAAAAXNSR0IArs4c6QAAAARzQklUCAgI\nCHwIZIgAACAASURBVHic7N15WJTl/gbw+52NZYBhB2EAEUQRBBUUEbfU3JfSNPWolZq/ytOi5fG0\nnbTs5OnkklpZaWnZopad3LfUMvddxAVBlEURkX2f7fcHMTrOwi6O3J/r8rqcd33eEcZ57/f7PI8A\nQAciIiIiIiIiIismauoGEBERERERERHVFwMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIi\nq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIis\nHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6\nDDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox\n4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eA\ng4iIiIiIiIisHgMOIiIiIiIiIrJ6DDiIiIiIiIiIyOox4CAiIiIiIiIiq8eAg4iIiIiIiIisHgMO\nIiIiIiIiIrJ6DDiIiIiIiIiIyOpJmroBREREREREZCwoKAjdu3dHXFwcLl26hAULFtz3NkgkEnTs\n2BHR0dEICgpCUFAQfH19IZfLIZfLIRKJUFRUhOLiYmRmZiI5ORnJyck4efIkjh8/jvLy8vve5poK\nCwvD6NGjERYWBoVCgbCwsKZukkUJCQnIz89HQkIC1q9fj4SEhKZu0gNHAKBr6kYQERERERHRHT/+\n+CN69uypf63VaqFUKu/Lue3t7TFo0CA89thjiI2Nhb29fZ2OU15ejqNHj2Ljxo3YtGkTCgoKGril\ntadQKD...
-2020-06-26 18:59:37:927 [HTTP] <-- GET /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109/screenshot 200 1192 ms - 1193586
-2020-06-26 18:59:37:927 [HTTP] 
-2020-06-26 18:59:38:237 [HTTP] --> DELETE /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109
-2020-06-26 18:59:38:237 [HTTP] {}
-2020-06-26 18:59:38:238 [W3C (3ddd36f7)] Calling AppiumDriver.deleteSession() with args: ["3ddd36f7-d656-496c-9eae-281431007109"]
-2020-06-26 18:59:38:238 [BaseDriver] Event 'quitSessionRequested' logged at 1593178178238 (18:59:38 GMT+0530 (India Standard Time))
-2020-06-26 18:59:38:238 [Appium] Removing session 3ddd36f7-d656-496c-9eae-281431007109 from our master session list
-2020-06-26 18:59:38:239 [UiAutomator2] Deleting UiAutomator2 session
-2020-06-26 18:59:38:239 [UiAutomator2] Deleting UiAutomator2 server session
-2020-06-26 18:59:38:239 [WD Proxy] Matched '/' to command name 'deleteSession'
-2020-06-26 18:59:38:240 [WD Proxy] Proxying [DELETE /] to [DELETE http://localhost:8200/wd/hub/session/6c7a2d6f-eab2-4102-b6c5-54e57a75190b] with no body
-2020-06-26 18:59:38:283 [WD Proxy] Got response with status 200: "{\"sessionId\":\"6c7a2d6f-eab2-4102-b6c5-54e57a75190b\",\"status\":0,\"value\":\"Session deleted\"}"
-2020-06-26 18:59:38:284 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell am force-stop com.amazon.mShop.android.shopping'
-2020-06-26 18:59:38:424 [Logcat] Stopping logcat capture
-2020-06-26 18:59:38:426 [ADB] Removing forwarded port socket connection: 8200 
-2020-06-26 18:59:38:427 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a forward --remove tcp\:8200'
-2020-06-26 18:59:38:436 [UiAutomator2] Restoring hidden api policy to the device default configuration
-2020-06-26 18:59:38:436 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings delete global hidden_api_policy_pre_p_apps'
-2020-06-26 18:59:38:480 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings delete global hidden_api_policy_p_apps'
-2020-06-26 18:59:38:519 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings delete global hidden_api_policy'
-2020-06-26 18:59:38:559 [BaseDriver] Event 'quitSessionFinished' logged at 1593178178558 (18:59:38 GMT+0530 (India Standard Time))
-2020-06-26 18:59:38:559 [W3C (3ddd36f7)] Received response: null
-2020-06-26 18:59:38:559 [W3C (3ddd36f7)] But deleting session, so not returning
-2020-06-26 18:59:38:559 [W3C (3ddd36f7)] Responding to client with driver.deleteSession() result: null
-2020-06-26 18:59:38:561 [HTTP] <-- DELETE /wd/hub/session/3ddd36f7-d656-496c-9eae-281431007109 200 323 ms - 14
-2020-06-26 18:59:38:561 [HTTP] 
-2020-06-26 18:59:38:643 [Instrumentation] .
-2020-06-26 18:59:39:027 [Instrumentation] Time: 42.037
-2020-06-26 18:59:39:027 [Instrumentation] 
-2020-06-26 18:59:39:027 [Instrumentation] OK (1 test)
-2020-06-26 18:59:39:348 [Instrumentation] The process has exited with code 0
+2020-06-26 19:20:46:921 [Appium] Welcome to Appium v1.12.1
+2020-06-26 19:20:46:922 [Appium] Non-default server args:
+2020-06-26 19:20:46:922 [Appium]   logFile: /Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/src/test/resources/logs/logResult.txt
+2020-06-26 19:20:46:923 [Appium]   localTimezone: true
+2020-06-26 19:20:46:940 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
+2020-06-26 19:20:46:981 [HTTP] --> GET /wd/hub/status
+2020-06-26 19:20:46:981 [HTTP] {}
+2020-06-26 19:20:46:983 [GENERIC] Calling AppiumDriver.getStatus() with args: []
+2020-06-26 19:20:46:984 [GENERIC] Responding to client with driver.getStatus() result: {"build":{"version":"1.12.1"}}
+2020-06-26 19:20:46:988 [HTTP] <-- GET /wd/hub/status 200 5 ms - 68
+2020-06-26 19:20:46:988 [HTTP] 
+2020-06-26 19:20:47:188 [HTTP] --> POST /wd/hub/session
+2020-06-26 19:20:47:189 [HTTP] {"desiredCapabilities":{"app":"/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","newCommandTimeout":14,"automationName":"uiautomator2","platformName":"Android","udid":"c88df41a","deviceName":"PocoF1"},"capabilities":{"firstMatch":[{"appium:app":"/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk","appium:appActivity":"com.amazon.mShop.home.HomeActivity","appium:appPackage":"com.amazon.mShop.android.shopping","appium:automationName":"uiautomator2","appium:deviceName":"PocoF1","appium:newCommandTimeout":14,"platformName":"android","appium:udid":"c88df41a"}]}}
+2020-06-26 19:20:47:189 [W3C] Calling AppiumDriver.createSession() with args: [{"app":"/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk","appActivity":"com.amazon.mShop.home.HomeActivity","appPackage":"com.amazon.mShop.android.shopping","newCommandTimeout":14,"automationName":"uiautomator2","platformName":"Android","udid":"c88df41a","deviceName":"PocoF1"},null,{"firstMatch":[{"appium:app":"/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk","appium:appActivity":"com.amazon.mShop.home.HomeActivity","appium:appPackage":"com.amazon.mShop.android.shopping","appium:automationName":"uiautomator2","appium:deviceName":"PocoF1","appium:newCommandTimeout":14,"platformName":"android","appium:udid":"c88df41a"}]}]
+2020-06-26 19:20:47:190 [BaseDriver] Event 'newSessionRequested' logged at 1593179447189 (19:20:47 GMT+0530 (India Standard Time))
+2020-06-26 19:20:47:354 [Appium] Appium v1.12.1 creating new AndroidUiautomator2Driver (v1.33.0) session
+2020-06-26 19:20:47:355 [Appium] Capabilities:
+2020-06-26 19:20:47:355 [Appium]   platformName: android
+2020-06-26 19:20:47:355 [Appium]   app: /Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk
+2020-06-26 19:20:47:355 [Appium]   appActivity: com.amazon.mShop.home.HomeActivity
+2020-06-26 19:20:47:355 [Appium]   appPackage: com.amazon.mShop.android.shopping
+2020-06-26 19:20:47:355 [Appium]   automationName: uiautomator2
+2020-06-26 19:20:47:356 [Appium]   deviceName: PocoF1
+2020-06-26 19:20:47:356 [Appium]   newCommandTimeout: 14
+2020-06-26 19:20:47:356 [Appium]   udid: c88df41a
+2020-06-26 19:20:47:358 [BaseDriver] W3C capabilities {"alwaysMatch":{"platformNa... and MJSONWP desired capabilities {"app":"/Users/di20020072/g... were provided
+2020-06-26 19:20:47:359 [BaseDriver] Creating session with W3C capabilities: {"alwaysMatch":{"platformNa...
+2020-06-26 19:20:47:364 [BaseDriver] Session created with session id: 1be88f58-92d8-4082-8a12-c8a2014ab69e
+2020-06-26 19:20:47:419 [BaseDriver] Using local app '/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk'
+2020-06-26 19:20:47:419 [UiAutomator2] Checking whether app is actually present
+2020-06-26 19:20:47:423 [ADB] Checking whether adb is present
+2020-06-26 19:20:47:426 [ADB] Found 1 'build-tools' folders under '/Users/di20020072/Library/Android/sdk' (newest first):
+2020-06-26 19:20:47:426 [ADB]     /Users/di20020072/Library/Android/sdk/build-tools/29.0.2
+2020-06-26 19:20:47:427 [ADB] Using adb from /Users/di20020072/Library/Android/sdk/platform-tools/adb
+2020-06-26 19:20:47:427 [AndroidDriver] Retrieving device list
+2020-06-26 19:20:47:427 [ADB] Trying to find a connected android device
+2020-06-26 19:20:47:427 [ADB] Getting connected devices...
+2020-06-26 19:20:47:439 [ADB] 1 device(s) connected
+2020-06-26 19:20:47:439 [AndroidDriver] Using device: c88df41a
+2020-06-26 19:20:47:440 [ADB] Setting device id to c88df41a
+2020-06-26 19:20:47:441 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell getprop ro.build.version.sdk'
+2020-06-26 19:20:47:516 [ADB] Current device property 'ro.build.version.sdk': 29
+2020-06-26 19:20:47:517 [ADB] Device API level: 29
+2020-06-26 19:20:47:517 [UiAutomator2] Relaxing hidden api policy
+2020-06-26 19:20:47:517 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings put global hidden_api_policy_pre_p_apps 1'
+2020-06-26 19:20:47:617 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings put global hidden_api_policy_p_apps 1'
+2020-06-26 19:20:47:712 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings put global hidden_api_policy 1'
+2020-06-26 19:20:47:806 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a wait-for-device'
+2020-06-26 19:20:47:814 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell echo ping'
+2020-06-26 19:20:47:856 [AndroidDriver] Pushing settings apk to device...
+2020-06-26 19:20:47:857 [ADB] Getting install status for io.appium.settings
+2020-06-26 19:20:47:857 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.settings'
+2020-06-26 19:20:47:944 [ADB] 'io.appium.settings' is installed
+2020-06-26 19:20:47:945 [ADB] Getting package info for 'io.appium.settings'
+2020-06-26 19:20:47:945 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.settings'
+2020-06-26 19:20:48:046 [ADB] Checking whether aapt is present
+2020-06-26 19:20:48:047 [ADB] Using aapt from /Users/di20020072/Library/Android/sdk/build-tools/29.0.2/aapt
+2020-06-26 19:20:48:058 [ADB] The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('2.14.0' >= '2.14.0')
+2020-06-26 19:20:48:059 [ADB] There is no need to install/upgrade '/usr/local/lib/node_modules/appium/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+2020-06-26 19:20:48:060 [ADB] Getting IDs of all 'io.appium.settings' processes
+2020-06-26 19:20:48:060 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell 'pgrep --help; echo $?''
+2020-06-26 19:20:48:141 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pgrep -f \^io\\.appium\\.settings\$'
+2020-06-26 19:20:48:273 [AndroidDriver] io.appium.settings is already running. There is no need to reset its permissions.
+2020-06-26 19:20:48:274 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell appops set io.appium.settings android\:mock_location allow'
+2020-06-26 19:20:48:388 [Logcat] Starting logcat capture
+2020-06-26 19:20:48:477 [ADB] Getting install status for io.appium.uiautomator2.server
+2020-06-26 19:20:48:477 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.uiautomator2.server'
+2020-06-26 19:20:48:547 [ADB] 'io.appium.uiautomator2.server' is installed
+2020-06-26 19:20:48:547 [ADB] Getting package info for 'io.appium.uiautomator2.server'
+2020-06-26 19:20:48:547 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.uiautomator2.server'
+2020-06-26 19:20:48:623 [ADB] The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('3.4.0' >= '3.4.0')
+2020-06-26 19:20:48:624 [UiAutomator2] io.appium.uiautomator2.server installation state: sameVersionInstalled
+2020-06-26 19:20:48:624 [ADB] Checking app cert for /usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk
+2020-06-26 19:20:48:625 [ADB] Using apksigner from /Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner
+2020-06-26 19:20:48:626 [ADB] Starting '/Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner' with args '["verify","--print-certs","/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk"]'
+2020-06-26 19:20:48:944 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2020-06-26 19:20:48:945 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2020-06-26 19:20:48:945 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2020-06-26 19:20:48:945 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2020-06-26 19:20:48:945 [ADB] 
+2020-06-26 19:20:48:945 [ADB] '/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v3.4.0.apk' is already signed.
+2020-06-26 19:20:48:945 [ADB] Getting install status for io.appium.uiautomator2.server.test
+2020-06-26 19:20:48:945 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package io.appium.uiautomator2.server.test'
+2020-06-26 19:20:49:013 [ADB] 'io.appium.uiautomator2.server.test' is installed
+2020-06-26 19:20:49:013 [ADB] Checking app cert for /usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+2020-06-26 19:20:49:013 [ADB] Starting '/Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner' with args '["verify","--print-certs","/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk"]'
+2020-06-26 19:20:49:274 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2020-06-26 19:20:49:274 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2020-06-26 19:20:49:274 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2020-06-26 19:20:49:275 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2020-06-26 19:20:49:275 [ADB] 
+2020-06-26 19:20:49:275 [ADB] '/usr/local/lib/node_modules/appium/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is already signed.
+2020-06-26 19:20:49:275 [UiAutomator2] Server packages are not going to be (re)installed
+2020-06-26 19:20:49:275 [UiAutomator2] Waiting up to 30000ms for services to be available
+2020-06-26 19:20:49:276 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pm list instrumentation'
+2020-06-26 19:20:49:351 [UiAutomator2] Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+2020-06-26 19:20:49:351 [UiAutomator2] Forwarding UiAutomator2 Server port 6790 to 8200
+2020-06-26 19:20:49:352 [ADB] Forwarding system: 8200 to device: 6790
+2020-06-26 19:20:49:352 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a forward tcp\:8200 tcp\:6790'
+2020-06-26 19:20:49:361 [ADB] Checking app cert for /Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk
+2020-06-26 19:20:49:362 [ADB] Starting '/Users/di20020072/Library/Android/sdk/build-tools/29.0.2/apksigner' with args '["verify","--print-certs","/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk"]'
+2020-06-26 19:20:51:079 [ADB] apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+2020-06-26 19:20:51:080 [ADB] Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+2020-06-26 19:20:51:080 [ADB] Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+2020-06-26 19:20:51:080 [ADB] Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+2020-06-26 19:20:51:080 [ADB] 
+2020-06-26 19:20:51:080 [ADB] '/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk' is already signed.
+2020-06-26 19:20:51:080 [ADB] Getting install status for com.amazon.mShop.android.shopping
+2020-06-26 19:20:51:081 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package com.amazon.mShop.android.shopping'
+2020-06-26 19:20:51:191 [ADB] 'com.amazon.mShop.android.shopping' is not installed
+2020-06-26 19:20:51:191 [ADB] Getting install status for com.amazon.mShop.android.shopping
+2020-06-26 19:20:51:191 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell dumpsys package com.amazon.mShop.android.shopping'
+2020-06-26 19:20:51:281 [ADB] 'com.amazon.mShop.android.shopping' is not installed
+2020-06-26 19:20:51:282 [ADB] App '/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk' is not installed
+2020-06-26 19:20:51:282 [ADB] Installing '/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk'
+2020-06-26 19:20:51:393 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell ls -t -1 /data/local/tmp/appium_cache'
+2020-06-26 19:20:51:471 [ADB] The count of applications in the cache: 7
+2020-06-26 19:20:51:471 [ADB] The application at '/Users/di20020072/git/AppiumFrameworkPOM/AppiumFrameworkPOM/app/Amazon_shopping.apk' is already cached to '/data/local/tmp/appium_cache/935e0e2e8be97b02826311feb68208ab57833d5e.apk'
+2020-06-26 19:20:51:472 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pm install /data/local/tmp/appium_cache/935e0e2e8be97b02826311feb68208ab57833d5e.apk'
+2020-06-26 19:20:57:311 [UiAutomator2] Deleting UiAutomator2 session
+2020-06-26 19:20:57:312 [UiAutomator2] Deleting UiAutomator2 server session
+2020-06-26 19:20:57:313 [WD Proxy] Matched '/' to command name 'deleteSession'
+2020-06-26 19:20:57:314 [UiAutomator2] Did not get confirmation UiAutomator2 deleteSession worked; Error was: UnknownError: An unknown server-side error occurred while processing the command. Original error: Trying to proxy a session command without session id
+2020-06-26 19:20:57:315 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell am force-stop com.amazon.mShop.android.shopping'
+2020-06-26 19:20:57:419 [Logcat] Stopping logcat capture
+2020-06-26 19:20:57:422 [ADB] Removing forwarded port socket connection: 8200 
+2020-06-26 19:20:57:422 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a forward --remove tcp\:8200'
+2020-06-26 19:20:57:432 [UiAutomator2] Restoring hidden api policy to the device default configuration
+2020-06-26 19:20:57:432 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings delete global hidden_api_policy_pre_p_apps'
+2020-06-26 19:20:57:535 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings delete global hidden_api_policy_p_apps'
+2020-06-26 19:20:57:616 [ADB] Running '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell settings delete global hidden_api_policy'
+2020-06-26 19:20:57:715 [BaseDriver] Event 'newSessionStarted' logged at 1593179457714 (19:20:57 GMT+0530 (India Standard Time))
+2020-06-26 19:20:57:715 [W3C] Encountered internal error running command: Error executing adbExec. Original error: 'Command '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pm install /data/local/tmp/appium_cache/935e0e2e8be97b02826311feb68208ab57833d5e.apk' exited with code 1'; Stderr: ''; Code: '1'
+2020-06-26 19:20:57:715 [W3C] Error: Command '/Users/di20020072/Library/Android/sdk/platform-tools/adb -P 5037 -s c88df41a shell pm install /data/local/tmp/appium_cache/935e0e2e8be97b02826311feb68208ab57833d5e.apk' exited with code 1
+2020-06-26 19:20:57:715 [W3C]     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/appium/node_modules/teen_process/lib/exec.js:94:19)
+2020-06-26 19:20:57:716 [W3C]     at ChildProcess.emit (events.js:209:13)
+2020-06-26 19:20:57:716 [W3C]     at maybeClose (internal/child_process.js:1021:16)
+2020-06-26 19:20:57:716 [W3C]     at Socket.<anonymous> (internal/child_process.js:430:11)
+2020-06-26 19:20:57:716 [W3C]     at Socket.emit (events.js:209:13)
+2020-06-26 19:20:57:716 [W3C]     at Pipe.<anonymous> (net.js:658:12)
+2020-06-26 19:20:57:724 [HTTP] <-- POST /wd/hub/session 500 10535 ms - 1021
+2020-06-26 19:20:57:724 [HTTP] 

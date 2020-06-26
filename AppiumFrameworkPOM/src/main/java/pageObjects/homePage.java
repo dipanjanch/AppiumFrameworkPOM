@@ -23,7 +23,9 @@ import utility.log;
 import utility.utilities;
 
 /**
- * the homePage class contains all the homepage elements and functions associated with them
+ * the homePage class contains all the homepage elements and functions
+ * associated with them
+ * 
  * @author Dipanjan
  *
  */
@@ -32,103 +34,96 @@ public class homePage extends baseFunctionalities {
 	public static String CompanyNameProductList;
 	public static String ProductNameProductlist;
 	public static String ProductPriceProductlist;
-	
+
 	/**
 	 * Constructor to initialize the web elements and the driver
+	 * 
 	 * @param driver
 	 */
-	public homePage(AndroidDriver<AndroidElement> driver)throws IOException
-	{
+	public homePage(AndroidDriver<AndroidElement> driver) throws IOException {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		this.driver = driver;
 
 	}
-	
-	@AndroidFindBy(id="com.amazon.mShop.android.shopping:id/rs_search_src_text")
-	public WebElement searchBox;	
-	@AndroidFindBy(xpath="	//android.widget.ImageView[@content-desc=\"Visa\"]")
+
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/rs_search_src_text")
+	public WebElement searchBox;
+	@AndroidFindBy(xpath = "	//android.widget.ImageView[@content-desc=\"Visa\"]")
 	public WebElement sugesstionBar;
-	@AndroidFindBy(id="com.amazon.mShop.android.shopping:id/item_title") 
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/item_title")
 	public List<WebElement> productList;
-	@AndroidFindBy(xpath="(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/	android.widget.TextView")
+	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/	android.widget.TextView")
 	public WebElement companyNameProductList;
-	@AndroidFindBy(xpath="(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]")
+	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]")
 	public WebElement ProductNameProductList;
-	@AndroidFindBy(xpath="(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/	android.widget.TextView")
+	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/	android.widget.TextView")
 	public WebElement ProductPriceProductList;
-	
-	public List<WebElement> getProductList()
-	{	
+
+	public List<WebElement> getProductList() {
 		return productList;
 	}
-	
-	
+
 	/**
 	 * This method enters the search text
-	 * @param text String argument as input
+	 * 
+	 * @param text: String argument as input
 	 * @throws InterruptedException
 	 */
-	public void enterSearchText(String text) throws InterruptedException
-	{
+	public void enterSearchText(String text) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		clickElement(wait.until(ExpectedConditions.visibilityOf(searchBox)), "searchBox");	
-		if(isElementDisplayed(sugesstionBar))
+		clickElement(wait.until(ExpectedConditions.visibilityOf(searchBox)), "searchBox");
+		if (isElementDisplayed(sugesstionBar))
 			clickCentreOfScreen();
 		setValueToField(searchBox, text, "searchBox");
-		reporter.pass("Entering SearchText"+text);
+		reporter.pass("Entering SearchText" + text);
 		clickEnterKey();
 	}
-	
+
 	/**
-	 * This method returns the name of the company of the product from the productlist
-	 * no  argument as input
+	 * This method returns the name of the company of the product from the
+	 * productlist no argument as input
 	 */
-	public String getCompanyNameProductList()
-	{
+	public String getCompanyNameProductList() {
 		String compName = getText(companyNameProductList);
 		compName = compName.replace("by ", "");
-		log.info("getCompanyNameProductList "+compName);
+		log.info("getCompanyNameProductList " + compName);
 		return compName;
 	}
-	
+
 	/**
-	 * This method returns the name of the product of the product from the productlist
-	 * no  argument as input
+	 * This method returns the name of the product of the product from the
+	 * productlist no argument as input
 	 */
-	public String getProductNameProductList()
-	{
+	public String getProductNameProductList() {
 		String prodName = getText(ProductNameProductList);
 		System.out.println(prodName);
-		log.info("getProductNameProductList "+prodName);
+		log.info("getProductNameProductList " + prodName);
 		return prodName;
 	}
-	
+
 	/**
-	 * This method returns the price of the product of the product from the productlist
-	 * no  argument as input
+	 * This method returns the price of the product of the product from the
+	 * productlist no argument as input
 	 */
-	public String getProductPriceProductList()
-	{
+	public String getProductPriceProductList() {
 		String prodPrice = getText(ProductPriceProductList);
-		String [] discountedAndOriginalPrice = prodPrice.split(" ",2);
+		String[] discountedAndOriginalPrice = prodPrice.split(" ", 2);
 		discountedAndOriginalPrice[0] = discountedAndOriginalPrice[0].replaceAll("[^0-9]", "");
 		discountedAndOriginalPrice[1] = discountedAndOriginalPrice[1].replaceAll("[^0-9]", "");
-		log.info("getProductPriceProductList "+discountedAndOriginalPrice[0]);
+		log.info("getProductPriceProductList " + discountedAndOriginalPrice[0]);
 		return discountedAndOriginalPrice[0];
 	}
-	
 
 	/**
 	 * This method is used to extract the product details from product list screen
 	 */
-	public void getProductDetails()
-	{
+	public void getProductDetails() {
 		CompanyNameProductList = getCompanyNameProductList();
-		log.info("CompanyNameProductList="+CompanyNameProductList);
+		log.info("CompanyNameProductList=" + CompanyNameProductList);
 		ProductNameProductlist = getProductNameProductList();
-		log.info("ProductNameProductlist="+ProductNameProductlist);
+		log.info("ProductNameProductlist=" + ProductNameProductlist);
 		ProductPriceProductlist = getProductPriceProductList();
-		log.info("ProductPriceProductlist="+ProductPriceProductlist);
+		log.info("ProductPriceProductlist=" + ProductPriceProductlist);
 		reporter.pass("Getting ProductDetails from product list");
 	}
 

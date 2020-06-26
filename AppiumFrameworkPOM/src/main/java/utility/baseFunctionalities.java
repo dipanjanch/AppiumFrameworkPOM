@@ -78,8 +78,7 @@ public class baseFunctionalities {
 	public static String base64String;
 
 	/**
-	 * This is the Before class method and it launches the driver and initializes
-	 * all the page objects
+	 * This method launches the server and initializes the driver.
 	 * 
 	 * @throws IOException
 	 * @throws InterruptedException
@@ -94,8 +93,7 @@ public class baseFunctionalities {
 	}
 
 	/**
-	 * This is the After class method and quits the driver after the test case is
-	 * over
+	 * This method and quits the driver and ends the session.
 	 * 
 	 * @throws IOException
 	 * @throws InterruptedException
@@ -121,7 +119,7 @@ public class baseFunctionalities {
 	}
 
 	/**
-	 * The method is use for stopping the server and closing the driver.
+	 * The method is use for stopping the server.
 	 * 
 	 * @throws InterruptedException
 	 * @throws IOException
@@ -137,31 +135,27 @@ public class baseFunctionalities {
 
 	/**
 	 * This method returns the the driver after creating the driver using the
-	 * derired capabilities
+	 * desired capabilities
 	 * 
 	 * @return driver object after creating the session
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
 	public static AndroidDriver<AndroidElement> capabilities() throws IOException, InterruptedException {
-
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		String device = (String) prop.get("device");
 		String UDID = (String) prop.get("UDID");
 		String appPackage = (String) prop.get("AppPackage");
 		String appActivity = (String) prop.get("AppActivity");
-
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("udid", UDID);
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
-
 		capabilities.setCapability("appPackage", appPackage);
 		capabilities.setCapability("appActivity", appActivity);
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		return driver;
 	}
 
@@ -234,9 +228,9 @@ public class baseFunctionalities {
 	}
 
 	/**
-	 * The click method is use for performing click operation for web elements
 	 * 
-	 * @param ele : will define WebElement value
+	 * @param ele : will define WebElement value.
+	 * @param elementDescription : the element description.
 	 * @throws InterruptedException
 	 */
 	public void clickElement(WebElement ele, String elementDescription) throws InterruptedException {
@@ -256,9 +250,9 @@ public class baseFunctionalities {
 	/**
 	 * Method to set the value in the text box based on locator
 	 * 
-	 * @param ele - WebElement element to pass the locator
-	 * 
-	 * @param val      - value to type in Mobile element
+	 * @param ele : WebElement element to pass the locator.
+	 * @param val : value to type in Mobile element.
+	 * @param elementDescription : the element description.
 	 */
 	public void setValueToField(WebElement ele, String val, String elementDescription) {
 		try {
@@ -295,24 +289,26 @@ public class baseFunctionalities {
 	 * @param ele - WebElement element to pass the locator
 	 */
 	public void waitForElementPresence(WebElement ele) {
-		WebDriverWait wait = new WebDriverWait(driver, 2000);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(ele));
 	}
 
 	/**
 	 * This method is used to change the screen orientation
+	 * 
 	 * @param orientation
 	 */
 	public void screenRotate(ScreenOrientation orientation) {
 		((AppiumDriver) driver).rotate(orientation);
 		log.info("Screen Orientation changed to " + orientation);
+		reporter.pass("Screen Orientation changed to " + orientation);
 	}
 
 	/**
 	 * The Method is will scroll the page until element will display
 	 * 
 	 * @param ele WebElement element to pass the locator
-	 * @return : it will return the webelement 
+	 * @return : it will return the webelement
 	 * @throws InterruptedException
 	 */
 	public AndroidElement scrollToElement(WebElement ele) throws InterruptedException {

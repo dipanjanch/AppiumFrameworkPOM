@@ -14,8 +14,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
  * This class is used to generate Listeners methods
  * 
  * @author Dipanjan
- * 
- *         History : 2020-Jun-25 Dipanjan : Implemented Listeners methods
  */
 
 public class listeners extends baseFunctionalities implements ITestListener {

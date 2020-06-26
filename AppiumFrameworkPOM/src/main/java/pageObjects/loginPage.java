@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -60,6 +61,16 @@ public class loginPage extends baseFunctionalities {
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Save Changes']")
 	public WebElement saveChanges;
 
+	/**
+	 * 
+	 */
+	public void validateLoginPageElements()
+	{
+		Assert.assertTrue(isElementDisplayed(signInButton), "Validating signInButton");
+		Assert.assertTrue(isElementDisplayed(createAccount), "Validating createAccount");
+		Assert.assertTrue(isElementDisplayed(skipLogin), "Validating skipLogin");
+		reporter.pass("Validating the login page elements");
+	}
 	/**
 	 * The method is for existing user login which having account already
 	 * 

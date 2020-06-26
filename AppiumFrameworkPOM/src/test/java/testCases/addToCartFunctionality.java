@@ -67,7 +67,7 @@ public class addToCartFunctionality extends baseFunctionalities {
 	public void TC01_add_To_Cart() throws IOException, InterruptedException {
 		reporter = report.createTest(this.getClass().getSimpleName());
 		reporter.info("Strat Testcase " + this.getClass().getSimpleName());
-		
+		login.validateLoginPageElements();
 		clickElement(login.skipLogin, "skipLogin");
 		home.enterSearchText(utils.getDataFromDatalist("FirstUser", "SearchText"));
 		home.getProductDetails();
