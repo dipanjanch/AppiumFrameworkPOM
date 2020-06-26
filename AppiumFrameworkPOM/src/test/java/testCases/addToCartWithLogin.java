@@ -3,12 +3,20 @@ package testCases;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.Properties;
 
+import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObjects.homePage;
+import pageObjects.loginPage;
+import pageObjects.productDetailPage;
 import utility.baseFunctionalities;
 import utility.log;
+import utility.utilities;
 
 
 /**
@@ -21,7 +29,12 @@ public class addToCartWithLogin extends baseFunctionalities {
 	public addToCartWithLogin() throws IOException {
 		super();
 	}
-
+	public loginPage login;
+	public homePage home;
+	public productDetailPage prodDetailPage;
+	public utilities utils;
+	WebDriverWait wait;
+	public static Properties prop;
 	/**
 	 * The method is for existing user login which having account already
 	 * 
@@ -30,10 +43,10 @@ public class addToCartWithLogin extends baseFunctionalities {
 	 */
 	@Test(priority = 0)
 	public void TC01_loginTest() throws InterruptedException, IOException {
-		logger = report.createTest(new Object(){}.getClass().getEnclosingMethod().getName());
-	    logger.info("Strat Testcase "+new Object(){}.getClass().getEnclosingMethod().getName());
+		reporter = report.createTest(new Object(){}.getClass().getEnclosingMethod().getName());
+	    reporter.info("Strat Testcase "+new Object(){}.getClass().getEnclosingMethod().getName());
 	    log.info("Welcome Page will display");
-	    login.clicksignInButton();
+	    clickElement(login.signInButton, "signIn Button");
 	    login.userlogin(utils.getDataFromDatalist("FirstUser", "username"), utils.getDataFromDatalist("FirstUser", "password"));	
 	}
 	
@@ -46,19 +59,24 @@ public class addToCartWithLogin extends baseFunctionalities {
 	@Test(dependsOnMethods = {"TC01_loginTest"})
 	public void TC02_add_To_Cart() throws IOException, InterruptedException
 	{    
-	    logger = report.createTest(new Object(){}.getClass().getEnclosingMethod().getName());
-	    logger.info("Strat Testcase "+new Object(){}.getClass().getEnclosingMethod().getName());
+	    reporter = report.createTest(new Object(){}.getClass().getEnclosingMethod().getName());
+	    reporter.info("Strat Testcase "+new Object(){}.getClass().getEnclosingMethod().getName());
 	        
 	    home.enterSearchText(utils.getDataFromDatalist("FirstUser", "SearchText"));	    	    
 	    home.getProductDetails();	    
-	    home.clickProductFromProductList();	    
-	    prodDetailPage.getProductDetailsProductDeatilPage();	    
+	    clickElement(home.ProductNameProductList, "Product from ProductList");    	    
 	    prodDetailPage.verifyProductdeatilsOnProductListandProductDeatilPgae();      
 	    prodDetailPage.clickAddtoCart(); 
-	    prodDetailPage.clickviewCart();    
-	    prodDetailPage.isProceedToBuyDisplayed();	    
+	    screenRotate(ScreenOrientation.LANDSCAPE);
+		attachScreenshottoReport();
+		waitForElementPresence(prodDetailPage.cartIcon);
+		clickElement(prodDetailPage.cartIcon, "view cartIcon");
+		Assert.assertTrue(isElementDisplayed(prodDetailPage.proceedToBuy),"Verify if Proceed to Buy button is displayed");
+		reporter.pass("Verify if Proceed to Buy button is displayed");
+		attachScreenshottoReport();
+		reporter.pass("Passed testcase");	    
 	    
-	    logger.pass("Passed testcase");
+	    reporter.pass("Passed testcase");
 	    
 	    
 	}

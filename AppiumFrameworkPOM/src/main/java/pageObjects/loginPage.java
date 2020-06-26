@@ -18,103 +18,77 @@ import utility.baseFunctionalities;
 import utility.log;
 
 /**
- * the loginPage class contains all the loginPage elements and functions associated with them
+ * the loginPage class contains all the loginPage elements and functions
+ * associated with them
+ * 
  * @author Dipanjan
  *
  */
 public class loginPage extends baseFunctionalities {
 	AndroidDriver<AndroidElement> driver;
+
 	/**
 	 * Constructor to initialize the webElements and the driver
+	 * 
 	 * @param driver
 	 */
-	public loginPage(AndroidDriver<AndroidElement> driver) throws IOException
-	{
+	public loginPage(AndroidDriver<AndroidElement> driver) throws IOException {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		this.driver=driver;
+		this.driver = driver;
 	}
-	
-	
-	/** 
-	 * The elements of the login page 
-	 */
-	 
-	@AndroidFindBy(id="com.amazon.mShop.android.shopping:id/skip_sign_in_button")
-	private WebElement skipLogin;
-	
-	@AndroidFindBy(id="com.amazon.mShop.android.shopping:id/sign_in_button")
-	private WebElement signInButton;
-	
-	@AndroidFindBy(id="	com.amazon.mShop.android.shopping:id/new_user")
-	private WebElement createAccount;
-	
-	@AndroidFindBy(xpath="//android.widget.EditText[@id='ap_email_login']")
-	private WebElement mobileEmailtextbox;
-	
-	@AndroidFindBy(xpath="//android.widget.Button[@id='continue']")
-	private WebElement continueButton;
-	
-	@AndroidFindBy(xpath="//android.widget.EditText[@id='ap_password']")
-	private WebElement passwordBox;
-	
-	@AndroidFindBy(id="signInSubmit")
-	private WebElement signInSubmit;
-	
-	@AndroidFindBy(xpath="//android.widget.RadioButton[@text='English - EN']")
-	private WebElement englishLanguageRadioButton;
-	
-	@AndroidFindBy(xpath="//android.widget.Button[@text='Save Changes']")
-	private WebElement saveChanges;
 
-	
 	/**
-	 * This method clicks in skipLogin
-	 *  no argument as input
+	 * The elements of the login page
 	 */
-	public void clickskipLogin()
-	{
-		skipLogin.click();
-		logger.pass("Clicking skipLogin");
-	}
-	
-	/**
-	 * This method clicks in signInButton
-	 *  no argument as input
-	 */
-	public void clicksignInButton()
-	{
-		signInButton.click();
-	}
-	
+
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/skip_sign_in_button")
+	public WebElement skipLogin;
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/sign_in_button")
+	public WebElement signInButton;
+	@AndroidFindBy(id = "	com.amazon.mShop.android.shopping:id/new_user")
+	public WebElement createAccount;
+	@AndroidFindBy(xpath = "//android.widget.EditText[@id='ap_email_login']")
+	public WebElement mobileEmailtextbox;
+	@AndroidFindBy(xpath = "//android.widget.Button[@id='continue']")
+	public WebElement continueButton;
+	@AndroidFindBy(xpath = "//android.widget.EditText[@id='ap_password']")
+	public WebElement passwordBox;
+	@AndroidFindBy(id = "signInSubmit")
+	public WebElement signInSubmit;
+	@AndroidFindBy(xpath = "//android.widget.RadioButton[@text='English - EN']")
+	public WebElement englishLanguageRadioButton;
+	@AndroidFindBy(xpath = "//android.widget.Button[@text='Save Changes']")
+	public WebElement saveChanges;
+
 	/**
 	 * The method is for existing user login which having account already
+	 * 
 	 * @param email contains the user name
-	 * @param pass contains the password
+	 * @param pass  contains the password
 	 * @throws InterruptedException
 	 */
-	public void userlogin(String email, String pass)
-			throws InterruptedException {
+	public void userlogin(String email, String pass) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOf(mobileEmailtextbox));
 		boolean eleSelected = mobileEmailtextbox.isDisplayed();
 		assertEquals(eleSelected, true);
-		mobileEmailtextbox.sendKeys(email);
-		continueButton.click();
+		setValueToField(mobileEmailtextbox, email, pass);
+		clickElement(continueButton, "continueButton");
 		wait.until(ExpectedConditions.visibilityOf(passwordBox));
-		passwordBox.sendKeys(pass);	
-		signInSubmit.click();
-		logger.pass("Username and password entered sucessfully");
+		setValueToField(passwordBox, pass, "passwordBox");
+		clickElement(signInSubmit, "signInSubmit button");
+		reporter.pass("Username and password entered sucessfully");
 	}
-	
-	
+
 	/**
-	 * This method clicks in RadioButton
-	 *  no argument as input
+	 * This method clicks in RadioButton no argument as input
+	 * 
+	 * @throws InterruptedException
 	 */
-	public void clickEnglishRadioButtonandSaveChanges()
-	{
-		englishLanguageRadioButton.click();
-		saveChanges.click();
+	public void clickEnglishRadioButtonandSaveChanges() throws InterruptedException {
+		clickElement(englishLanguageRadioButton, "englishLanguageRadioButton");
+		clickElement(saveChanges, "saveChanges");
+
 	}
 
 }

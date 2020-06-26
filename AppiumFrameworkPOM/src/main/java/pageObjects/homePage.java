@@ -20,6 +20,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
 import utility.baseFunctionalities;
 import utility.log;
+import utility.utilities;
 
 /**
  * the homePage class contains all the homepage elements and functions associated with them
@@ -42,41 +43,25 @@ public class homePage extends baseFunctionalities {
 		this.driver = driver;
 
 	}
-	/** The elements of the Home page */
 	
 	@AndroidFindBy(id="com.amazon.mShop.android.shopping:id/rs_search_src_text")
-	public WebElement searchBox;
-	
+	public WebElement searchBox;	
 	@AndroidFindBy(xpath="	//android.widget.ImageView[@content-desc=\"Visa\"]")
 	public WebElement sugesstionBar;
-	
 	@AndroidFindBy(id="com.amazon.mShop.android.shopping:id/item_title") 
 	public List<WebElement> productList;
-	
 	@AndroidFindBy(xpath="(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/	android.widget.TextView")
 	public WebElement companyNameProductList;
-	
 	@AndroidFindBy(xpath="(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]")
 	public WebElement ProductNameProductList;
-	
 	@AndroidFindBy(xpath="(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/	android.widget.TextView")
 	public WebElement ProductPriceProductList;
 	
 	public List<WebElement> getProductList()
-	{
-		
+	{	
 		return productList;
 	}
 	
-	
-	/**
-	 * This method is used to click on search screen
-	 */
-	public void clickSearchText()
-	{	
-		searchBox.click();
-		logger.pass("Clicking SearchText");
-	}
 	
 	/**
 	 * This method enters the search text
@@ -86,23 +71,12 @@ public class homePage extends baseFunctionalities {
 	public void enterSearchText(String text) throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(searchBox)).click();
-		if(sugesstionBar.isDisplayed())
+		clickElement(wait.until(ExpectedConditions.visibilityOf(searchBox)), "searchBox");	
+		if(isElementDisplayed(sugesstionBar))
 			clickCentreOfScreen();
-		searchBox.sendKeys(text);
-		logger.pass("Entering SearchText"+text);
+		setValueToField(searchBox, text, "searchBox");
+		reporter.pass("Entering SearchText"+text);
 		clickEnterKey();
-	}
-	
-	
-	/**
-	 * This method clicks on a product from product list
-	 * no  argument as input
-	 */
-	public void clickProductFromProductList()
-	{
-		ProductNameProductList.click();
-		logger.pass("Click Product FromProductList");
 	}
 	
 	/**
@@ -111,7 +85,7 @@ public class homePage extends baseFunctionalities {
 	 */
 	public String getCompanyNameProductList()
 	{
-		String compName = companyNameProductList.getText();
+		String compName = getText(companyNameProductList);
 		compName = compName.replace("by ", "");
 		log.info("getCompanyNameProductList "+compName);
 		return compName;
@@ -123,7 +97,7 @@ public class homePage extends baseFunctionalities {
 	 */
 	public String getProductNameProductList()
 	{
-		String prodName = ProductNameProductList.getText();
+		String prodName = getText(ProductNameProductList);
 		System.out.println(prodName);
 		log.info("getProductNameProductList "+prodName);
 		return prodName;
@@ -135,8 +109,7 @@ public class homePage extends baseFunctionalities {
 	 */
 	public String getProductPriceProductList()
 	{
-		String prodPrice = ProductPriceProductList.getText();
-		
+		String prodPrice = getText(ProductPriceProductList);
 		String [] discountedAndOriginalPrice = prodPrice.split(" ",2);
 		discountedAndOriginalPrice[0] = discountedAndOriginalPrice[0].replaceAll("[^0-9]", "");
 		discountedAndOriginalPrice[1] = discountedAndOriginalPrice[1].replaceAll("[^0-9]", "");
@@ -156,7 +129,7 @@ public class homePage extends baseFunctionalities {
 		log.info("ProductNameProductlist="+ProductNameProductlist);
 		ProductPriceProductlist = getProductPriceProductList();
 		log.info("ProductPriceProductlist="+ProductPriceProductlist);
-		logger.pass("Getting ProductDetails from product list");
+		reporter.pass("Getting ProductDetails from product list");
 	}
 
 }

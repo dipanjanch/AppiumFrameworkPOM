@@ -1,0 +1,28 @@
+[INFO ] 2020-06-26 18:58:50.109 [main] log - Execution started
+[INFO ] 2020-06-26 18:58:50.190 [main] log - Extent Report initialized
+[INFO ] 2020-06-26 18:58:50.190 [main] log - Starting server
+[INFO ] 2020-06-26 18:58:52.454 [main] log - ****************************************************************************************
+[INFO ] 2020-06-26 18:58:52.454 [main] log - $$$$$$$$$$$$$$$$$$$$$              addToCartFunctionality      $$$$$$$$$$$$$$$$$$$$$$$
+[INFO ] 2020-06-26 18:58:52.454 [main] log - ****************************************************************************************
+[INFO ] 2020-06-26 18:59:00.294 [main] log - Driver has been created
+[INFO ] 2020-06-26 18:59:00.305 [main] log - Test caseTC01_add_To_Cart started
+[INFO ] 2020-06-26 18:59:04.248 [main] log - Element skipLogin  clicked
+[INFO ] 2020-06-26 18:59:05.238 [main] log - Element searchBox  clicked
+[INFO ] 2020-06-26 18:59:09.710 [main] log - Entered the text65-inch TVin the field searchBox
+[INFO ] 2020-06-26 18:59:11.445 [main] log - Performed click on enter key
+[INFO ] 2020-06-26 18:59:11.445 [main] log - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/	android.widget.TextView})
+[INFO ] 2020-06-26 18:59:13.006 [main] log - getCompanyNameProductList Samsung
+[INFO ] 2020-06-26 18:59:13.006 [main] log - CompanyNameProductList=Samsung
+[INFO ] 2020-06-26 18:59:13.006 [main] log - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]})
+[INFO ] 2020-06-26 18:59:13.550 [main] log - getProductNameProductList Samsung 163 cm (65 Inches) Wondertainment Series Ultra HD LED Smart TV UA65TUE60AKXXL (Titan Gray) (2020 model)
+[INFO ] 2020-06-26 18:59:13.550 [main] log - ProductNameProductlist=Samsung 163 cm (65 Inches) Wondertainment Series Ultra HD LED Smart TV UA65TUE60AKXXL (Titan Gray) (2020 model)
+[INFO ] 2020-06-26 18:59:13.551 [main] log - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/	android.widget.TextView})
+[INFO ] 2020-06-26 18:59:14.059 [main] log - getProductPriceProductList 89999
+[INFO ] 2020-06-26 18:59:14.059 [main] log - ProductPriceProductlist=89999
+[INFO ] 2020-06-26 18:59:16.950 [main] log - Element Product from ProductList  clicked
+[INFO ] 2020-06-26 18:59:36.728 [main] log - Test case TC01_add_To_Cart is failed
+[INFO ] 2020-06-26 18:59:38.234 [main] log - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2020-06-26 18:59:38.562 [main] log - Driver has been destroyed
+[INFO ] 2020-06-26 18:59:38.562 [main] log - Stopping server
+[INFO ] 2020-06-26 18:59:40.662 [main] log - Server stopped
+[INFO ] 2020-06-26 18:59:40.686 [main] log - Execution Finished
