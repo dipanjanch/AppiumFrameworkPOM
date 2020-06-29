@@ -21,12 +21,12 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.PointOption;
-import pageObjects.loginPage;
-import pageObjects.productDetailPage;
-import utility.basePage;
-import utility.log;
-import utility.utilities;
-import pageObjects.homePage;
+import pageObjects.LoginPage;
+import pageObjects.ProductDetailPage;
+import utility.LogClass;
+import utility.Utilities;
+import pageObjects.BasePage;
+import pageObjects.HomePage;
 
 /**
  * the addToCartFunctionality class contains the test case which will skip login
@@ -35,28 +35,30 @@ import pageObjects.homePage;
  * @author Dipanjan
  *
  */
-public class addToCartFunctionality extends basePage {
+public class AddToCartFunctionality extends BasePage {
 
-	public addToCartFunctionality() throws IOException {
+	public AddToCartFunctionality() throws IOException {
 		super();
 	}
-	public loginPage login;
-	public homePage home;
-	public productDetailPage prodDetailPage;
-	public utilities utils;
+
+	public LoginPage login;
+	public HomePage home;
+	public ProductDetailPage prodDetailPage;
+	public Utilities utils;
 	WebDriverWait wait;
 	public static Properties prop;
-	
+
 	@BeforeTest
 	public void setUp() throws InterruptedException, IOException {
 		initialization();
-		login = new loginPage(driver);
-		home = new homePage(driver);
-		prodDetailPage = new productDetailPage(driver);
-		utils = new utilities();
-		log.info("Driver has been created");
+		login = new LoginPage(driver);
+		home = new HomePage(driver);
+		prodDetailPage = new ProductDetailPage(driver);
+		utils = new Utilities();
+		LogClass.info("Driver has been created");
 		wait = new WebDriverWait(driver, 30);
 	}
+
 	/**
 	 * Test case will skip login and test the add-to-cart functionality
 	 * 
@@ -72,23 +74,24 @@ public class addToCartFunctionality extends basePage {
 		home.enterSearchText(utils.getDataFromDatalist("FirstUser", "SearchText"));
 		home.getProductDetails();
 		clickElement(home.ProductNameProductList, "Product from ProductList");
-		prodDetailPage.verifyProductdeatilsOnProductListandProductDeatilPgae();
+		prodDetailPage.verifyProductdetails();
 		screenRotate(ScreenOrientation.LANDSCAPE);
-		prodDetailPage.clickAddtoCart();			
+		prodDetailPage.clickAddtoCart();
 		attachScreenshottoReport();
 		waitForElementPresence(prodDetailPage.cartIcon);
 		clickElement(prodDetailPage.cartIcon, "view cartIcon");
 		screenRotate(ScreenOrientation.PORTRAIT);
-		Assert.assertTrue(isElementDisplayed(prodDetailPage.proceedToBuy),"Verify if Proceed to Buy button is displayed");
+		Assert.assertTrue(isElementDisplayed(prodDetailPage.proceedToBuy),
+				"Verify if Proceed to Buy button is displayed");
 		reporter.pass("Verify if Proceed to Buy button is displayed");
 		attachScreenshottoReport();
 		reporter.pass("Passed testcase");
 
 	}
-	
+
 	@AfterTest
 	public void teardown() throws InterruptedException, IOException {
 		tearDown();
-		}
+	}
 
 }

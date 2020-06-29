@@ -18,9 +18,8 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
-import utility.basePage;
-import utility.log;
-import utility.utilities;
+import utility.LogClass;
+import utility.Utilities;
 
 /**
  * the homePage class contains all the homepage elements and functions
@@ -29,7 +28,7 @@ import utility.utilities;
  * @author Dipanjan
  *
  */
-public class homePage extends basePage {
+public class HomePage extends BasePage {
 	AndroidDriver<AndroidElement> driver;
 	public static String CompanyNameProductList;
 	public static String ProductNameProductlist;
@@ -40,7 +39,7 @@ public class homePage extends basePage {
 	 * 
 	 * @param driver
 	 */
-	public homePage(AndroidDriver<AndroidElement> driver) throws IOException {
+	public HomePage(AndroidDriver<AndroidElement> driver) throws IOException {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		this.driver = driver;
 
@@ -48,7 +47,7 @@ public class homePage extends basePage {
 
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/rs_search_src_text")
 	public WebElement searchBox;
-	@AndroidFindBy(xpath = "	//android.widget.ImageView[@content-desc=\"Visa\"]")
+	@AndroidFindBy(xpath = "//android.widget.ImageView[@content-desc=\"Visa\"]")
 	public WebElement sugesstionBar;
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/item_title")
 	public List<WebElement> productList;
@@ -86,7 +85,7 @@ public class homePage extends basePage {
 	public String getCompanyNameProductList() {
 		String compName = getText(companyNameProductList);
 		compName = compName.replace("by ", "");
-		log.info("getCompanyNameProductList " + compName);
+		LogClass.info("getCompanyNameProductList " + compName);
 		return compName;
 	}
 
@@ -97,7 +96,7 @@ public class homePage extends basePage {
 	public String getProductNameProductList() {
 		String prodName = getText(ProductNameProductList);
 		System.out.println(prodName);
-		log.info("getProductNameProductList " + prodName);
+		LogClass.info("getProductNameProductList " + prodName);
 		return prodName;
 	}
 
@@ -110,7 +109,7 @@ public class homePage extends basePage {
 		String[] discountedAndOriginalPrice = prodPrice.split(" ", 2);
 		discountedAndOriginalPrice[0] = discountedAndOriginalPrice[0].replaceAll("[^0-9]", "");
 		discountedAndOriginalPrice[1] = discountedAndOriginalPrice[1].replaceAll("[^0-9]", "");
-		log.info("getProductPriceProductList " + discountedAndOriginalPrice[0]);
+		LogClass.info("getProductPriceProductList " + discountedAndOriginalPrice[0]);
 		return discountedAndOriginalPrice[0];
 	}
 
@@ -119,11 +118,11 @@ public class homePage extends basePage {
 	 */
 	public void getProductDetails() {
 		CompanyNameProductList = getCompanyNameProductList();
-		log.info("CompanyNameProductList=" + CompanyNameProductList);
+		LogClass.info("CompanyNameProductList=" + CompanyNameProductList);
 		ProductNameProductlist = getProductNameProductList();
-		log.info("ProductNameProductlist=" + ProductNameProductlist);
+		LogClass.info("ProductNameProductlist=" + ProductNameProductlist);
 		ProductPriceProductlist = getProductPriceProductList();
-		log.info("ProductPriceProductlist=" + ProductPriceProductlist);
+		LogClass.info("ProductPriceProductlist=" + ProductPriceProductlist);
 		reporter.pass("Getting ProductDetails from product list");
 	}
 

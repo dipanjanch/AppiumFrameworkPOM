@@ -10,33 +10,35 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 
+import pageObjects.BasePage;
+
 /**
  * This class is used to generate Listeners methods
  * 
  * @author Dipanjan
  */
 
-public class listeners extends basePage implements ITestListener {
-	public listeners() throws IOException {
+public class Listeners extends BasePage implements ITestListener {
+	public Listeners() throws IOException {
 		super();
 	}
 
 	public void onTestStart(ITestResult result) {
-		log.info("Test case" + result.getName() + " started");
+		LogClass.info("Test case" + result.getName() + " started");
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		log.info("Test case " + result.getName() + " is passed");
+		LogClass.info("Test case " + result.getName() + " is passed");
 		try {
 			attachScreenshottoReport();
 		} catch (IOException e) {
-			log.info("Failed to capture screenshot");
+			LogClass.info("Failed to capture screenshot");
 			e.printStackTrace();
 		}
 	}
 
 	public void onTestFailure(ITestResult result) {
-		log.info("Test case " + result.getName() + " is failed");
+		LogClass.info("Test case " + result.getName() + " is failed");
 		if (result.getStatus() == ITestResult.FAILURE) {
 			try {
 				reporter.log(Status.FAIL, MarkupHelper
@@ -44,7 +46,7 @@ public class listeners extends basePage implements ITestListener {
 				reporter.fail(result.getThrowable());
 				attachScreenshottoReport();
 			} catch (IOException e) {
-				log.info("Failed to capture screenshot");
+				LogClass.info("Failed to capture screenshot");
 				e.printStackTrace();
 			}
 		}
@@ -52,19 +54,19 @@ public class listeners extends basePage implements ITestListener {
 	}
 
 	public void onTestSkipped(ITestResult result) {
-		log.info("Test case " + result.getName() + " is skipped");
+		LogClass.info("Test case " + result.getName() + " is skipped");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		log.info("Test case " + result.getName() + " is failed");
+		LogClass.info("Test case " + result.getName() + " is failed");
 	}
 
 	public void onStart(ITestContext context) {
-		log.info("Execution started");
+		LogClass.info("Execution started");
 	}
 
 	public void onFinish(ITestContext context) {
-		log.info("Execution Finished");
+		LogClass.info("Execution Finished");
 		report.flush();
 	}
 }

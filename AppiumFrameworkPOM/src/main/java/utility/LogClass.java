@@ -9,11 +9,11 @@ import org.apache.logging.log4j.Logger;
  * @author Dipanjan
  *
  */
-public class log {
+public class LogClass {
 
 //Initialize Log4j logs
 
-	private static Logger Log = LogManager.getLogger(log.class.getName());
+	private static Logger Log = LogManager.getLogger(LogClass.class.getName());
 
 	/**
 	 * This is to print log for the beginning of the test case, as we usually run so

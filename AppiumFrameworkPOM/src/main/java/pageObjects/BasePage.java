@@ -1,4 +1,4 @@
-package utility;
+package pageObjects;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,9 +57,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.appium.java_client.touch.offset.PointOption;
-import pageObjects.loginPage;
-import pageObjects.productDetailPage;
-import pageObjects.homePage;
+import utility.LogClass;
 
 /**
  * the baseFunctionalities class contains all the important functions for all
@@ -68,7 +66,7 @@ import pageObjects.homePage;
  * @author Dipanjan
  *
  */
-public class basePage {
+public class BasePage {
 
 	public static AppiumDriverLocalService service;
 	public static AndroidDriver<AndroidElement> driver;
@@ -85,10 +83,10 @@ public class basePage {
 	 */
 	public void initialization() throws IOException, InterruptedException {
 		setupReporters();
-		log.info("Starting server");
+		LogClass.info("Starting server");
 		startServer();
-		log.startTestCase(this.getClass().getSimpleName());
-		driver = capabilities();
+		LogClass.startTestCase(this.getClass().getSimpleName());
+		driver = getDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
@@ -99,9 +97,9 @@ public class basePage {
 	 * @throws InterruptedException
 	 */
 	public void tearDown() throws InterruptedException, IOException {
-		log.endTestCase(this.getClass().getSimpleName());
+		LogClass.endTestCase(this.getClass().getSimpleName());
 		driver.quit();
-		log.info("Driver has been destroyed");
+		LogClass.info("Driver has been destroyed");
 		stopServer();
 	}
 
@@ -127,9 +125,9 @@ public class basePage {
 	public void stopServer() throws InterruptedException, IOException {
 		String startServerFromCode = (String) prop.get("startServerFromCode");
 		if (startServerFromCode.equalsIgnoreCase("yes")) {
-			log.info("Stopping server");
+			LogClass.info("Stopping server");
 			service.stop();
-			log.info("Server stopped");
+			LogClass.info("Server stopped");
 		}
 	}
 
@@ -141,7 +139,7 @@ public class basePage {
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
-	public static AndroidDriver<AndroidElement> capabilities() throws IOException, InterruptedException {
+	public static AndroidDriver<AndroidElement> getDriver() throws IOException, InterruptedException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		String device = (String) prop.get("device");
 		String UDID = (String) prop.get("UDID");
@@ -173,7 +171,7 @@ public class basePage {
 				new File(System.getProperty("user.dir") + "/Reports/addTocart" + getCurrentDateTime() + ".html"));
 		report = new ExtentReports();
 		report.attachReporter(extent);
-		log.info("Extent Report initialized");
+		LogClass.info("Extent Report initialized");
 	}
 
 	/**
@@ -229,20 +227,20 @@ public class basePage {
 
 	/**
 	 * 
-	 * @param ele : will define WebElement value.
+	 * @param ele                : will define WebElement value.
 	 * @param elementDescription : the element description.
 	 * @throws InterruptedException
 	 */
 	public void clickElement(WebElement ele, String elementDescription) throws InterruptedException {
 		try {
 			ele.click();
-			log.info("Element " + elementDescription + "  clicked");
+			LogClass.info("Element " + elementDescription + "  clicked");
 			reporter.pass("Element " + elementDescription + "  clicked");
 		} catch (NoSuchElementException e) {
-			log.info("Element NOT present - " + ele);
+			LogClass.info("Element NOT present - " + ele);
 			Assert.fail("Elelemnt " + ele + " could not be clicked because - " + e);
 		} catch (StaleElementReferenceException e1) {
-			log.info("Element  " + ele + "   NOT present");
+			LogClass.info("Element  " + ele + "   NOT present");
 			Assert.fail("Elelemnt " + ele + " could not be clicked because - " + e1);
 		}
 	}
@@ -250,24 +248,24 @@ public class basePage {
 	/**
 	 * Method to set the value in the text box based on locator
 	 * 
-	 * @param ele : WebElement element to pass the locator.
-	 * @param val : value to type in Mobile element.
+	 * @param ele                : WebElement element to pass the locator.
+	 * @param val                : value to type in Mobile element.
 	 * @param elementDescription : the element description.
 	 */
 	public void setValueToField(WebElement ele, String val, String elementDescription) {
 		try {
 			ele.clear();
 			ele.sendKeys(val);
-			log.info("Entered the text" + val + "in the field " + elementDescription);
+			LogClass.info("Entered the text" + val + "in the field " + elementDescription);
 			reporter.pass("Entered the text" + val + "in the field " + elementDescription);
 		} catch (NoSuchElementException e) {
-			log.info("Element NOT present - " + elementDescription);
+			LogClass.info("Element NOT present - " + elementDescription);
 			Assert.fail("Value could not be set in element - " + ele + "   because - " + e);
 		} catch (StaleElementReferenceException e1) {
-			log.info("Element NOT present");
+			LogClass.info("Element NOT present");
 			Assert.fail("Value could not be set in element - " + ele + "  because - " + e1);
 		} catch (Exception e2) {
-			log.info("Value could not be set because of error:  " + e2);
+			LogClass.info("Value could not be set because of error:  " + e2);
 			Assert.fail("Value could not be set in element - " + ele + "  because - " + e2);
 
 		}
@@ -300,7 +298,7 @@ public class basePage {
 	 */
 	public void screenRotate(ScreenOrientation orientation) {
 		((AppiumDriver) driver).rotate(orientation);
-		log.info("Screen Orientation changed to " + orientation);
+		LogClass.info("Screen Orientation changed to " + orientation);
 		reporter.pass("Screen Orientation changed to " + orientation);
 	}
 
@@ -325,12 +323,12 @@ public class basePage {
 				if (ele.isDisplayed()) {
 					i = numberOfTimes;
 				} else
-					log.info(String.format("Element not available. Scrolling times…", i + 1));
+					LogClass.info(String.format("Element not available. Scrolling times…", i + 1));
 				new TouchAction(driver).longPress(PointOption.point(anchor, startPoint))
 						.moveTo(PointOption.point(anchor, endPoint)).release().perform();
 
 			} catch (Exception ex) {
-				log.info(String.format("Element not available. Scrolling times…", i + 1));
+				LogClass.info(String.format("Element not available. Scrolling times…", i + 1));
 			}
 		}
 
@@ -343,7 +341,7 @@ public class basePage {
 	 * @param ele WebElement element to pass the locator
 	 */
 	public String getText(WebElement ele) {
-		log.info("Getting text from the field " + ele);
+		LogClass.info("Getting text from the field " + ele);
 		return ele.getText().trim();
 	}
 
@@ -374,7 +372,7 @@ public class basePage {
 	 */
 	public void clickEnterKey() {
 		((AndroidDriver) driver).pressKey(new KeyEvent().withKey(AndroidKey.ENTER));
-		log.info("Performed click on enter key");
+		LogClass.info("Performed click on enter key");
 	}
 
 }

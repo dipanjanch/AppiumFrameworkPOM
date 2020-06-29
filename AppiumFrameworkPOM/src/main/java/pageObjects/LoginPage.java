@@ -15,8 +15,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import utility.basePage;
-import utility.log;
+import utility.LogClass;
 
 /**
  * the loginPage class contains all the loginPage elements and functions
@@ -25,7 +24,7 @@ import utility.log;
  * @author Dipanjan
  *
  */
-public class loginPage extends basePage {
+public class LoginPage extends BasePage {
 	AndroidDriver<AndroidElement> driver;
 
 	/**
@@ -33,7 +32,7 @@ public class loginPage extends basePage {
 	 * 
 	 * @param driver
 	 */
-	public loginPage(AndroidDriver<AndroidElement> driver) throws IOException {
+	public LoginPage(AndroidDriver<AndroidElement> driver) throws IOException {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		this.driver = driver;
 	}
@@ -64,13 +63,14 @@ public class loginPage extends basePage {
 	/**
 	 * 
 	 */
-	public void validateLoginPageElements()
-	{
+	public void validateLoginPageElements() {
 		Assert.assertTrue(isElementDisplayed(signInButton), "Validating signInButton");
 		Assert.assertTrue(isElementDisplayed(createAccount), "Validating createAccount");
 		Assert.assertTrue(isElementDisplayed(skipLogin), "Validating skipLogin");
+		LogClass.info("Validating the login page elements");
 		reporter.pass("Validating the login page elements");
 	}
+
 	/**
 	 * The method is for existing user login which having account already
 	 * 
@@ -79,13 +79,12 @@ public class loginPage extends basePage {
 	 * @throws InterruptedException
 	 */
 	public void userlogin(String email, String pass) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(mobileEmailtextbox));
+		isElementDisplayed(mobileEmailtextbox);
 		boolean eleSelected = mobileEmailtextbox.isDisplayed();
 		assertEquals(eleSelected, true);
 		setValueToField(mobileEmailtextbox, email, pass);
 		clickElement(continueButton, "continueButton");
-		wait.until(ExpectedConditions.visibilityOf(passwordBox));
+		isElementDisplayed(passwordBox);
 		setValueToField(passwordBox, pass, "passwordBox");
 		clickElement(signInSubmit, "signInSubmit button");
 		reporter.pass("Username and password entered sucessfully");

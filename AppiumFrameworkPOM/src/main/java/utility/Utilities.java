@@ -28,6 +28,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.PointOption;
+import pageObjects.BasePage;
 
 /**
  * the utilities class contains all the important functions like data access etc
@@ -35,7 +36,7 @@ import io.appium.java_client.touch.offset.PointOption;
  * @author Dipanjan
  *
  */
-public class utilities extends basePage {
+public class Utilities extends BasePage {
 	AndroidDriver<AndroidElement> driver;
 
 	/**
