@@ -16,7 +16,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
  * @author Dipanjan
  */
 
-public class listeners extends baseFunctionalities implements ITestListener {
+public class listeners extends basePage implements ITestListener {
 	public listeners() throws IOException {
 		super();
 	}

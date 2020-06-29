@@ -68,7 +68,7 @@ import pageObjects.homePage;
  * @author Dipanjan
  *
  */
-public class baseFunctionalities {
+public class basePage {
 
 	public static AppiumDriverLocalService service;
 	public static AndroidDriver<AndroidElement> driver;

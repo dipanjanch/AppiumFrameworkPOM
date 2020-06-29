@@ -17,7 +17,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
 import jdk.internal.org.jline.utils.Log;
-import utility.baseFunctionalities;
+import utility.basePage;
 import utility.log;
 
 /**
@@ -25,7 +25,7 @@ import utility.log;
  * @author Dipanjan
  *
  */
-public class productDetailPage extends baseFunctionalities{
+public class productDetailPage extends basePage{
 	AndroidDriver<AndroidElement> driver;
 	public static String CompanyNameProductDeatilPage;
 	public static String ProductNameProductDeatilPage;

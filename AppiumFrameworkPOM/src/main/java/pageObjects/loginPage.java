@@ -15,7 +15,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import utility.baseFunctionalities;
+import utility.basePage;
 import utility.log;
 
 /**
@@ -25,7 +25,7 @@ import utility.log;
  * @author Dipanjan
  *
  */
-public class loginPage extends baseFunctionalities {
+public class loginPage extends basePage {
 	AndroidDriver<AndroidElement> driver;
 
 	/**
@@ -46,7 +46,7 @@ public class loginPage extends baseFunctionalities {
 	public WebElement skipLogin;
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/sign_in_button")
 	public WebElement signInButton;
-	@AndroidFindBy(id = "	com.amazon.mShop.android.shopping:id/new_user")
+	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/new_user")
 	public WebElement createAccount;
 	@AndroidFindBy(xpath = "//android.widget.EditText[@id='ap_email_login']")
 	public WebElement mobileEmailtextbox;

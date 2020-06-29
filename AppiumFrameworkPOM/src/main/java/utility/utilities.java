@@ -35,7 +35,7 @@ import io.appium.java_client.touch.offset.PointOption;
  * @author Dipanjan
  *
  */
-public class utilities extends baseFunctionalities {
+public class utilities extends basePage {
 	AndroidDriver<AndroidElement> driver;
 
 	/**

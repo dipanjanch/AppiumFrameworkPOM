@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import pageObjects.homePage;
 import pageObjects.loginPage;
 import pageObjects.productDetailPage;
-import utility.baseFunctionalities;
+import utility.basePage;
 import utility.log;
 import utility.utilities;
 
@@ -24,7 +24,7 @@ import utility.utilities;
  * @author Dipanjan
  *
  */
-public class addToCartWithLogin extends baseFunctionalities {
+public class addToCartWithLogin extends basePage {
 	
 	public addToCartWithLogin() throws IOException {
 		super();

@@ -1,8 +1,32 @@
-[INFO ] 2020-06-26 19:20:45.623 [main] log - Execution started
-[INFO ] 2020-06-26 19:20:45.690 [main] log - Extent Report initialized
-[INFO ] 2020-06-26 19:20:45.690 [main] log - Starting server
-[INFO ] 2020-06-26 19:20:46.988 [main] log - ****************************************************************************************
-[INFO ] 2020-06-26 19:20:46.988 [main] log - $$$$$$$$$$$$$$$$$$$$$              addToCartFunctionality      $$$$$$$$$$$$$$$$$$$$$$$
-[INFO ] 2020-06-26 19:20:46.988 [main] log - ****************************************************************************************
-[INFO ] 2020-06-26 19:20:57.764 [main] log - Test case TC01_add_To_Cart is skipped
-[INFO ] 2020-06-26 19:20:57.793 [main] log - Execution Finished
+[INFO ] 2020-06-29 14:22:28.537 [main] log - Execution started
+[INFO ] 2020-06-29 14:22:28.597 [main] log - Extent Report initialized
+[INFO ] 2020-06-29 14:22:28.597 [main] log - Starting server
+[INFO ] 2020-06-29 14:22:29.928 [main] log - ****************************************************************************************
+[INFO ] 2020-06-29 14:22:29.929 [main] log - $$$$$$$$$$$$$$$$$$$$$              addToCartFunctionality      $$$$$$$$$$$$$$$$$$$$$$$
+[INFO ] 2020-06-29 14:22:29.929 [main] log - ****************************************************************************************
+[INFO ] 2020-06-29 14:22:36.051 [main] log - Driver has been created
+[INFO ] 2020-06-29 14:22:36.059 [main] log - Test caseTC01_add_To_Cart started
+[INFO ] 2020-06-29 14:22:39.600 [main] log - Element skipLogin  clicked
+[INFO ] 2020-06-29 14:22:42.635 [main] log - Element searchBox  clicked
+[INFO ] 2020-06-29 14:22:47.040 [main] log - Entered the text65-inch TVin the field searchBox
+[INFO ] 2020-06-29 14:22:49.224 [main] log - Performed click on enter key
+[INFO ] 2020-06-29 14:22:49.224 [main] log - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/	android.widget.TextView})
+[INFO ] 2020-06-29 14:22:51.213 [main] log - getCompanyNameProductList TCL
+[INFO ] 2020-06-29 14:22:51.214 [main] log - CompanyNameProductList=TCL
+[INFO ] 2020-06-29 14:22:51.214 [main] log - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]})
+[INFO ] 2020-06-29 14:22:51.798 [main] log - getProductNameProductList TCL 163.96 cm (65 inches)  AI 4K UHD Certified Android Smart LED TV 65P8 (Black) (2019 Model)
+[INFO ] 2020-06-29 14:22:51.798 [main] log - ProductNameProductlist=TCL 163.96 cm (65 inches)  AI 4K UHD Certified Android Smart LED TV 65P8 (Black) (2019 Model)
+[INFO ] 2020-06-29 14:22:51.798 [main] log - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/	android.widget.TextView})
+[INFO ] 2020-06-29 14:22:52.259 [main] log - getProductPriceProductList 50990
+[INFO ] 2020-06-29 14:22:52.259 [main] log - ProductPriceProductlist=50990
+[INFO ] 2020-06-29 14:22:55.110 [main] log - Element Product from ProductList  clicked
+[INFO ] 2020-06-29 14:22:59.315 [main] log - Screen Orientation changed to LANDSCAPE
+[INFO ] 2020-06-29 14:23:14.970 [main] log - Element addtoCart  clicked
+[INFO ] 2020-06-29 14:23:17.791 [main] log - Element view cartIcon  clicked
+[INFO ] 2020-06-29 14:23:17.917 [main] log - Screen Orientation changed to PORTRAIT
+[INFO ] 2020-06-29 14:23:24.721 [main] log - Test case TC01_add_To_Cart is passed
+[INFO ] 2020-06-29 14:23:25.542 [main] log - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2020-06-29 14:23:25.888 [main] log - Driver has been destroyed
+[INFO ] 2020-06-29 14:23:25.888 [main] log - Stopping server
+[INFO ] 2020-06-29 14:23:27.958 [main] log - Server stopped
+[INFO ] 2020-06-29 14:23:27.975 [main] log - Execution Finished

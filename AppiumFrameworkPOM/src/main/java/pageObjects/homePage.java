@@ -18,7 +18,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
-import utility.baseFunctionalities;
+import utility.basePage;
 import utility.log;
 import utility.utilities;
 
@@ -29,7 +29,7 @@ import utility.utilities;
  * @author Dipanjan
  *
  */
-public class homePage extends baseFunctionalities {
+public class homePage extends basePage {
 	AndroidDriver<AndroidElement> driver;
 	public static String CompanyNameProductList;
 	public static String ProductNameProductlist;

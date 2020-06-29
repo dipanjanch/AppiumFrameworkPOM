@@ -23,7 +23,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.offset.PointOption;
 import pageObjects.loginPage;
 import pageObjects.productDetailPage;
-import utility.baseFunctionalities;
+import utility.basePage;
 import utility.log;
 import utility.utilities;
 import pageObjects.homePage;
@@ -35,7 +35,7 @@ import pageObjects.homePage;
  * @author Dipanjan
  *
  */
-public class addToCartFunctionality extends baseFunctionalities {
+public class addToCartFunctionality extends basePage {
 
 	public addToCartFunctionality() throws IOException {
 		super();
