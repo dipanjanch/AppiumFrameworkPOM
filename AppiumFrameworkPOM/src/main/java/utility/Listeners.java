@@ -29,6 +29,7 @@ public class Listeners extends BasePage implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 		LogClass.info("Test case " + result.getName() + " is passed");
+		reporter.pass("Passed testcase");
 		try {
 			attachScreenshottoReport();
 		} catch (IOException e) {

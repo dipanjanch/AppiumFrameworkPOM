@@ -30,9 +30,9 @@ import utility.Utilities;
  */
 public class HomePage extends BasePage {
 	AndroidDriver<AndroidElement> driver;
-	public static String CompanyNameProductList;
-	public static String ProductNameProductlist;
-	public static String ProductPriceProductlist;
+	public static String CompanyName;
+	public static String ProductName;
+	public static String ProductPrice;
 
 	/**
 	 * Constructor to initialize the web elements and the driver
@@ -51,11 +51,11 @@ public class HomePage extends BasePage {
 	public WebElement sugesstionBar;
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/item_title")
 	public List<WebElement> productList;
-	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[2]/	android.widget.TextView")
+	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[3]/android.widget.TextView")
 	public WebElement companyNameProductList;
-	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[2]")
+	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[3]")
 	public WebElement ProductNameProductList;
-	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[2]/	android.widget.TextView")
+	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[3]/android.widget.TextView")
 	public WebElement ProductPriceProductList;
 
 	public List<WebElement> getProductList() {
@@ -80,7 +80,7 @@ public class HomePage extends BasePage {
 
 	/**
 	 * This method returns the name of the company of the product from the
-	 * productlist no argument as input
+	 * product list no argument as input
 	 */
 	public String getCompanyNameProductList() {
 		String compName = getText(companyNameProductList);
@@ -91,7 +91,7 @@ public class HomePage extends BasePage {
 
 	/**
 	 * This method returns the name of the product of the product from the
-	 * productlist no argument as input
+	 * product list no argument as input
 	 */
 	public String getProductNameProductList() {
 		String prodName = getText(ProductNameProductList);
@@ -102,7 +102,7 @@ public class HomePage extends BasePage {
 
 	/**
 	 * This method returns the price of the product of the product from the
-	 * productlist no argument as input
+	 * product list no argument as input
 	 */
 	public String getProductPriceProductList() {
 		String prodPrice = getText(ProductPriceProductList);
@@ -117,12 +117,12 @@ public class HomePage extends BasePage {
 	 * This method is used to extract the product details from product list screen
 	 */
 	public void getProductDetails() {
-		CompanyNameProductList = getCompanyNameProductList();
-		LogClass.info("CompanyNameProductList=" + CompanyNameProductList);
-		ProductNameProductlist = getProductNameProductList();
-		LogClass.info("ProductNameProductlist=" + ProductNameProductlist);
-		ProductPriceProductlist = getProductPriceProductList();
-		LogClass.info("ProductPriceProductlist=" + ProductPriceProductlist);
+		CompanyName = getCompanyNameProductList();
+		LogClass.info("CompanyNameProductList=" + CompanyName);
+		ProductName = getProductNameProductList();
+		LogClass.info("ProductNameProductlist=" + ProductName);
+		ProductPrice = getProductPriceProductList();
+		LogClass.info("ProductPriceProductlist=" + ProductPrice);
 		reporter.pass("Getting ProductDetails from product list");
 	}
 

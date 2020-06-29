@@ -9,6 +9,8 @@ import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.BasePage;
@@ -37,6 +39,16 @@ public class AddToCartWithLogin extends BasePage {
 	public Utilities utils;
 	WebDriverWait wait;
 	public static Properties prop;
+
+	@BeforeTest
+	public void setUp() throws InterruptedException, IOException {
+		initialization();
+		login = new LoginPage(driver);
+		home = new HomePage(driver);
+		prodDetailPage = new ProductDetailPage(driver);
+		utils = new Utilities();
+		LogClass.info("Driver has been created");
+	}
 
 	/**
 	 * The method is for existing user login which having account already
@@ -73,19 +85,21 @@ public class AddToCartWithLogin extends BasePage {
 		home.getProductDetails();
 		clickElement(home.ProductNameProductList, "Product from ProductList");
 		prodDetailPage.verifyProductdetails();
-		prodDetailPage.clickAddtoCart();
 		screenRotate(ScreenOrientation.LANDSCAPE);
+		prodDetailPage.clickAddtoCart();		
 		attachScreenshottoReport();
+		screenRotate(ScreenOrientation.PORTRAIT);
 		waitForElementPresence(prodDetailPage.cartIcon);
 		clickElement(prodDetailPage.cartIcon, "view cartIcon");
 		Assert.assertTrue(isElementDisplayed(prodDetailPage.proceedToBuy),
 				"Verify if Proceed to Buy button is displayed");
 		reporter.pass("Verify if Proceed to Buy button is displayed");
 		attachScreenshottoReport();
-		reporter.pass("Passed testcase");
+	}
 
-		reporter.pass("Passed testcase");
-
+	@AfterTest
+	public void teardown() throws InterruptedException, IOException {
+		tearDown();
 	}
 
 }

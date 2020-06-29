@@ -28,9 +28,6 @@ import utility.LogClass;
  */
 public class ProductDetailPage extends BasePage {
 	AndroidDriver<AndroidElement> driver;
-	public static String CompanyName;
-	public static String ProductName;
-	public static String ProductPrice;
 
 	public ProductDetailPage(AndroidDriver<AndroidElement> driver) throws IOException {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -43,11 +40,11 @@ public class ProductDetailPage extends BasePage {
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/loc_ux_gps_enter_pincode")
 	public WebElement enterPinCode;
 	@AndroidFindBy(xpath = "//android.view.View[@resource-id='bylineInfo']/	android.widget.TextView")
-	public WebElement compnayNameProductDetailPage;
+	public WebElement compnayName;
 	@AndroidFindBy(xpath = "//android.view.View[@resource-id='title_feature_div']/android.view.View")
-	public WebElement productNameProductDetailPage;
+	public WebElement productName;
 	@AndroidFindBy(xpath = "//android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/	android.widget.EditText")
-	public WebElement productPriceProductDetailPage;
+	public WebElement productPrice;
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Add to Cart']")
 	public WebElement addtoCart;
 	@AndroidFindBy(xpath = "//android.view.View[@content-desc='Cart']/android.view.View/android.widget.Button")
@@ -67,14 +64,14 @@ public class ProductDetailPage extends BasePage {
 	 */
 	public void verifyProductdetails() {
 		ignoreEnterPincodePopup();
-		Assert.assertTrue(verifyingPage(compnayNameProductDetailPage, (HomePage.CompanyNameProductList)),
+		Assert.assertTrue(verifyingPage(compnayName, (HomePage.CompanyName)),
 				"Validating the Company Name in Product List and Product Detail Screen");
 		reporter.pass("Validating the Product Company name details");
-		Assert.assertTrue(verifyingPage(productNameProductDetailPage, (HomePage.ProductNameProductlist)),
+		Assert.assertTrue(verifyingPage(productName, (HomePage.ProductName)),
 				"Validating the Product Name in Product List and Product Detail Screen");
 		reporter.pass("Validating the Product name details");
-		ProductPrice = productPriceProductDetailPage.getText().replaceAll("[^0-9]", "");
-		Assert.assertTrue(ProductPrice.equalsIgnoreCase(HomePage.ProductPriceProductlist),
+		String ProductPrice = productPrice.getText().replaceAll("[^0-9]", "");
+		Assert.assertTrue(ProductPrice.equalsIgnoreCase(HomePage.ProductPrice),
 				"Validating the Product Price in Product List and Product Detail Screen");
 		reporter.pass("Validating the Product price details");
 	}

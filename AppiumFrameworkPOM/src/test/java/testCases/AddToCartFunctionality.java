@@ -56,7 +56,6 @@ public class AddToCartFunctionality extends BasePage {
 		prodDetailPage = new ProductDetailPage(driver);
 		utils = new Utilities();
 		LogClass.info("Driver has been created");
-		wait = new WebDriverWait(driver, 30);
 	}
 
 	/**
@@ -85,7 +84,6 @@ public class AddToCartFunctionality extends BasePage {
 				"Verify if Proceed to Buy button is displayed");
 		reporter.pass("Verify if Proceed to Buy button is displayed");
 		attachScreenshottoReport();
-		reporter.pass("Passed testcase");
 
 	}
 
