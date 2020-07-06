@@ -2,23 +2,15 @@ package pageObjects;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Properties;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
@@ -30,13 +22,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -45,8 +30,6 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -60,8 +43,7 @@ import io.appium.java_client.touch.offset.PointOption;
 import utility.LogClass;
 
 /**
- * the baseFunctionalities class contains all the important functions for all
- * testcases
+ * This class contains all the important reusable methods
  * 
  * @author Dipanjan
  *
@@ -72,8 +54,8 @@ public class BasePage {
 	public static AndroidDriver<AndroidElement> driver;
 	public static ExtentReports report;
 	public static ExtentTest reporter;
-	public static Properties prop;
-	public static String base64String;
+	public static Properties property;
+	public static String screenshot;
 
 	/**
 	 * This method launches the server and initializes the driver.
@@ -82,9 +64,9 @@ public class BasePage {
 	 * @throws InterruptedException
 	 */
 	public void initialization() throws IOException, InterruptedException {
-		setupReporters();
+		initializeReporter();
 		LogClass.info("Starting server");
-		startServer();
+		startAppiumServer();
 		LogClass.startTestCase(this.getClass().getSimpleName());
 		driver = getDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -96,18 +78,18 @@ public class BasePage {
 	 * @throws IOException
 	 * @throws InterruptedException
 	 */
-	public void tearDown() throws InterruptedException, IOException {
+	public void tearDownMethod() throws InterruptedException, IOException {
 		LogClass.endTestCase(this.getClass().getSimpleName());
 		driver.quit();
 		LogClass.info("Driver has been destroyed");
-		stopServer();
+		stopAppiumServer();
 	}
 
 	/**
 	 * The StartServer method is use for starting the server.
 	 */
-	public static void startServer() {
-		String startServerFromCode = (String) prop.get("startServerFromCode");
+	public static void startAppiumServer() {
+		String startServerFromCode = (String) property.get("startServerFromCode");
 		if (startServerFromCode.equalsIgnoreCase("yes")) {
 			service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
 					.withLogFile(new File(System.getProperty("user.dir") + "/src/test/resources/logs/logResult.txt"))
@@ -122,8 +104,8 @@ public class BasePage {
 	 * @throws InterruptedException
 	 * @throws IOException
 	 */
-	public void stopServer() throws InterruptedException, IOException {
-		String startServerFromCode = (String) prop.get("startServerFromCode");
+	public void stopAppiumServer() throws InterruptedException, IOException {
+		String startServerFromCode = (String) property.get("startServerFromCode");
 		if (startServerFromCode.equalsIgnoreCase("yes")) {
 			LogClass.info("Stopping server");
 			service.stop();
@@ -141,10 +123,10 @@ public class BasePage {
 	 */
 	public static AndroidDriver<AndroidElement> getDriver() throws IOException, InterruptedException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		String device = (String) prop.get("device");
-		String UDID = (String) prop.get("UDID");
-		String appPackage = (String) prop.get("AppPackage");
-		String appActivity = (String) prop.get("AppActivity");
+		String device = (String) property.get("device");
+		String UDID = (String) property.get("UDID");
+		String appPackage = (String) property.get("AppPackage");
+		String appActivity = (String) property.get("AppActivity");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("udid", UDID);
@@ -162,45 +144,37 @@ public class BasePage {
 	 * 
 	 * @throws IOException
 	 */
-	public void setupReporters() throws IOException {
-		prop = new Properties();
-		FileInputStream fs = new FileInputStream(
+	public void initializeReporter() throws IOException {
+		property = new Properties();
+		FileInputStream fileStream = new FileInputStream(
 				System.getProperty("user.dir") + "/src/main/java/resources/global.properties");
-		prop.load(fs);
+		property.load(fileStream);
 		ExtentHtmlReporter extent = new ExtentHtmlReporter(
-				new File(System.getProperty("user.dir") + "/Reports/addTocart" + getCurrentDateTime() + ".html"));
+				new File(System.getProperty("user.dir") + "/Reports/addTocart" + getCurrentDateAndTime() + ".html"));
 		report = new ExtentReports();
 		report.attachReporter(extent);
 		LogClass.info("Extent Report initialized");
 	}
-
-	/**
-	 * This method is used to capture screenshot and store it in Screenshots folder
-	 * 
-	 * @param driver object of the mobile driver
-	 * @return
-	 * @throws IOException
-	 */
-	public static String getScreenshot() throws IOException {
-		String path = System.getProperty("user.dir") + "/Screenshots/" + getCurrentDateTime() + ".png";
-		File scrfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrfile, new File(path));
-		return path;
-
+	
+	public void startTestCase(String testName)
+	{
+		reporter = report.createTest(testName);
+		reporter.info("Strat Testcase " +testName) ;
 	}
 
 	/**
 	 * This method is used to get a base64 screenshot and attach it to the extent
 	 * report
 	 * 
-	 * @param driver object of the mobile driver
-	 * 
 	 * @throws IOException
 	 */
-	public static void attachScreenshottoReport() throws IOException {
-		base64String = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+	public static void attachScreenshotToReport() throws IOException {
+		String path = System.getProperty("user.dir") + "/Screenshots/" + getCurrentDateAndTime() + ".png";
+		File scrfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrfile, new File(path));
+		screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 		reporter.log(Status.INFO, "Snapshot below: ",
-				MediaEntityBuilder.createScreenCaptureFromBase64String(base64String).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(screenshot).build());
 
 	}
 
@@ -209,7 +183,7 @@ public class BasePage {
 	 * 
 	 * @return String containing the current time
 	 */
-	public static String getCurrentDateTime() {
+	public static String getCurrentDateAndTime() {
 		DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
 		Date currentDate = new Date();
 		return customFormat.format(currentDate);
@@ -226,47 +200,48 @@ public class BasePage {
 	}
 
 	/**
+	 * Method to perform click on a element
 	 * 
-	 * @param ele                : will define WebElement value.
+	 * @param element            : will define WebElement value.
 	 * @param elementDescription : the element description.
 	 * @throws InterruptedException
 	 */
-	public void clickElement(WebElement ele, String elementDescription) throws InterruptedException {
+	public void clickElement(WebElement element, String elementDescription) throws InterruptedException {
 		try {
-			ele.click();
+			element.click();
 			LogClass.info("Element " + elementDescription + "  clicked");
 			reporter.pass("Element " + elementDescription + "  clicked");
 		} catch (NoSuchElementException e) {
-			LogClass.info("Element NOT present - " + ele);
-			Assert.fail("Elelemnt " + ele + " could not be clicked because - " + e);
+			LogClass.info("Element NOT present - " + element);
+			Assert.fail("Elelemnt " + element + " could not be clicked because - " + e);
 		} catch (StaleElementReferenceException e1) {
-			LogClass.info("Element  " + ele + "   NOT present");
-			Assert.fail("Elelemnt " + ele + " could not be clicked because - " + e1);
+			LogClass.info("Element  " + element + "   NOT present");
+			Assert.fail("Elelemnt " + element + " could not be clicked because - " + e1);
 		}
 	}
 
 	/**
 	 * Method to set the value in the text box based on locator
 	 * 
-	 * @param ele                : WebElement element to pass the locator.
-	 * @param val                : value to type in Mobile element.
+	 * @param element            : WebElement element to pass the locator.
+	 * @param value                : value to type in Mobile element.
 	 * @param elementDescription : the element description.
 	 */
-	public void setValueToField(WebElement ele, String val, String elementDescription) {
+	public void setValueToField(WebElement element, String value, String elementDescription) {
 		try {
-			ele.clear();
-			ele.sendKeys(val);
-			LogClass.info("Entered the text" + val + "in the field " + elementDescription);
-			reporter.pass("Entered the text" + val + "in the field " + elementDescription);
+			element.clear();
+			element.sendKeys(value);
+			LogClass.info("Entered the text" + value + "in the field " + elementDescription);
+			reporter.pass("Entered the text" + value + "in the field " + elementDescription);
 		} catch (NoSuchElementException e) {
 			LogClass.info("Element NOT present - " + elementDescription);
-			Assert.fail("Value could not be set in element - " + ele + "   because - " + e);
+			Assert.fail("Value could not be set in element - " + element + "   because - " + e);
 		} catch (StaleElementReferenceException e1) {
 			LogClass.info("Element NOT present");
-			Assert.fail("Value could not be set in element - " + ele + "  because - " + e1);
+			Assert.fail("Value could not be set in element - " + element + "  because - " + e1);
 		} catch (Exception e2) {
 			LogClass.info("Value could not be set because of error:  " + e2);
-			Assert.fail("Value could not be set in element - " + ele + "  because - " + e2);
+			Assert.fail("Value could not be set in element - " + element + "  because - " + e2);
 
 		}
 	}
@@ -274,75 +249,42 @@ public class BasePage {
 	/**
 	 * Method to check element displayed
 	 * 
-	 * @param ele - WebElement element to pass the locator
+	 * @param element : WebElement element to pass the locator
 	 */
-	public boolean isElementDisplayed(WebElement ele) {
-		waitForElementPresence(ele);
-		return ele.isDisplayed();
+	public boolean isElementDisplayed(WebElement element) {
+		waitForElementPresent(element);
+		return element.isDisplayed();
 	}
 
 	/**
 	 * Method to check element presence using explicit wait condition
 	 * 
-	 * @param ele - WebElement element to pass the locator
+	 * @param element - WebElement element to pass the locator
 	 */
-	public void waitForElementPresence(WebElement ele) {
+	public void waitForElementPresent(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOf(ele));
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	/**
-	 * This method is used to change the screen orientation
+	 * Method to change the screen orientation
 	 * 
 	 * @param orientation
 	 */
-	public void screenRotate(ScreenOrientation orientation) {
+	public void verifyScreenRotation(ScreenOrientation orientation) {
 		((AppiumDriver) driver).rotate(orientation);
 		LogClass.info("Screen Orientation changed to " + orientation);
 		reporter.pass("Screen Orientation changed to " + orientation);
 	}
 
 	/**
-	 * The Method is will scroll the page until element will display
-	 * 
-	 * @param ele WebElement element to pass the locator
-	 * @return : it will return the webelement
-	 * @throws InterruptedException
-	 */
-	public AndroidElement scrollToElement(WebElement ele) throws InterruptedException {
-		AndroidElement element = null;
-		int numberOfTimes = 4;
-		Dimension size = driver.manage().window().getSize();
-		int anchor = (int) (size.width / 2);
-		// Swipe up to scroll down
-		int startPoint = (int) (size.height - 10);
-		int endPoint = 10;
-
-		for (int i = 0; i < numberOfTimes; i++) {
-			try {
-				if (ele.isDisplayed()) {
-					i = numberOfTimes;
-				} else
-					LogClass.info(String.format("Element not available. Scrolling times…", i + 1));
-				new TouchAction(driver).longPress(PointOption.point(anchor, startPoint))
-						.moveTo(PointOption.point(anchor, endPoint)).release().perform();
-
-			} catch (Exception ex) {
-				LogClass.info(String.format("Element not available. Scrolling times…", i + 1));
-			}
-		}
-
-		return (AndroidElement) ele;
-	}
-
-	/**
 	 * Method to get the text based on the element
 	 * 
-	 * @param ele WebElement element to pass the locator
+	 * @param element : WebElement element to pass the locator
 	 */
-	public String getText(WebElement ele) {
-		LogClass.info("Getting text from the field " + ele);
-		return ele.getText().trim();
+	public String getText(WebElement element) {
+		LogClass.info("Getting text from the field " + element);
+		return element.getText().trim();
 	}
 
 	/**
@@ -361,7 +303,7 @@ public class BasePage {
 	 * @param text : will define string value
 	 * @return : will return the result in boolean.
 	 */
-	public boolean verifyingPage(WebElement ele, String text) {
+	public boolean verifyValueInField(WebElement ele, String text) {
 		boolean result = false;
 		result = ele.getText().equalsIgnoreCase(text) ? true : false;
 		return result;

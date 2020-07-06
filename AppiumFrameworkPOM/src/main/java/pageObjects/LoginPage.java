@@ -3,12 +3,9 @@ package pageObjects;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -18,8 +15,8 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import utility.LogClass;
 
 /**
- * the loginPage class contains all the loginPage elements and functions
- * associated with them
+ * This class contains all the loginPage elements and functions associated with
+ * them
  * 
  * @author Dipanjan
  *
@@ -42,31 +39,31 @@ public class LoginPage extends BasePage {
 	 */
 
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/skip_sign_in_button")
-	public WebElement skipLogin;
+	public WebElement skipLoginButton;
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/sign_in_button")
-	public WebElement signInButton;
+	public WebElement signinButton;
 	@AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/new_user")
-	public WebElement createAccount;
-	@AndroidFindBy(xpath = "//android.widget.EditText[@id='ap_email_login']")
-	public WebElement mobileEmailtextbox;
-	@AndroidFindBy(xpath = "//android.widget.Button[@id='continue']")
+	public WebElement createAccountButton;
+	@AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='ap_email_login']")
+	public WebElement userNameTextbox;
+	@AndroidFindBy(xpath = "//android.widget.Button[@resource-id='continue']")
 	public WebElement continueButton;
-	@AndroidFindBy(xpath = "//android.widget.EditText[@id='ap_password']")
+	@AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='ap_password']")
 	public WebElement passwordBox;
-	@AndroidFindBy(id = "signInSubmit")
-	public WebElement signInSubmit;
+	@AndroidFindBy(xpath = "//android.widget.Button[@resource-id='signInSubmit']")
+	public WebElement signinSubmitButton;
 	@AndroidFindBy(xpath = "//android.widget.RadioButton[@text='English - EN']")
-	public WebElement englishLanguageRadioButton;
+	public WebElement languageRadioButton;
 	@AndroidFindBy(xpath = "//android.widget.Button[@text='Save Changes']")
-	public WebElement saveChanges;
+	public WebElement saveChangesButton;
 
 	/**
 	 * 
 	 */
 	public void validateLoginPageElements() {
-		Assert.assertTrue(isElementDisplayed(signInButton), "Validating signInButton");
-		Assert.assertTrue(isElementDisplayed(createAccount), "Validating createAccount");
-		Assert.assertTrue(isElementDisplayed(skipLogin), "Validating skipLogin");
+		Assert.assertTrue(isElementDisplayed(signinButton), "Validating SignIn Button");
+		Assert.assertTrue(isElementDisplayed(createAccountButton), "Validating Create Account Button");
+		Assert.assertTrue(isElementDisplayed(skipLoginButton), "Validating SkipLogin button");
 		LogClass.info("Validating the login page elements");
 		reporter.pass("Validating the login page elements");
 	}
@@ -78,16 +75,15 @@ public class LoginPage extends BasePage {
 	 * @param pass  contains the password
 	 * @throws InterruptedException
 	 */
-	public void userlogin(String email, String pass) throws InterruptedException {
-		isElementDisplayed(mobileEmailtextbox);
-		boolean eleSelected = mobileEmailtextbox.isDisplayed();
-		assertEquals(eleSelected, true);
-		setValueToField(mobileEmailtextbox, email, pass);
-		clickElement(continueButton, "continueButton");
+	public void verifyUserLogin(String email, String pass) throws InterruptedException {
+		assertEquals(isElementDisplayed(userNameTextbox), true);
+		setValueToField(userNameTextbox, email, "Username Field");
+		clickElement(continueButton, "Continue Button");
 		isElementDisplayed(passwordBox);
-		setValueToField(passwordBox, pass, "passwordBox");
-		clickElement(signInSubmit, "signInSubmit button");
+		setValueToField(passwordBox, pass, "Password Field");
+		clickElement(signinSubmitButton, "SignIn Submit button");
 		reporter.pass("Username and password entered sucessfully");
+		selectLanguage();
 	}
 
 	/**
@@ -95,9 +91,9 @@ public class LoginPage extends BasePage {
 	 * 
 	 * @throws InterruptedException
 	 */
-	public void clickEnglishRadioButtonandSaveChanges() throws InterruptedException {
-		clickElement(englishLanguageRadioButton, "englishLanguageRadioButton");
-		clickElement(saveChanges, "saveChanges");
+	public void selectLanguage() throws InterruptedException {
+		clickElement(languageRadioButton, "English Language RadioButton");
+		clickElement(saveChangesButton, "Save Changes");
 
 	}
 

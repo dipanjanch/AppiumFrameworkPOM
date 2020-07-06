@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"utility","l":"baseFunctionalities"}]
+typeSearchIndex = [{"p":"testCases","l":"AddToCartFunctionality"},{"p":"testCases","l":"AddToCartWithLogin"},{"l":"All Classes","url":"allclasses-index.html"},{"p":"pageObjects","l":"BasePage"},{"p":"pageObjects","l":"HomePage"},{"p":"utility","l":"Listeners"},{"p":"utility","l":"LogClass"},{"p":"pageObjects","l":"LoginPage"},{"p":"pageObjects","l":"ProductDetailPage"},{"p":"utility","l":"Utilities"}]

@@ -23,9 +23,7 @@ public class LogClass {
 	 */
 
 	public static void startTestCase(String sTestCaseName) {
-		Log.info("****************************************************************************************");
-		Log.info("$$$$$$$$$$$$$$$$$$$$$              " + sTestCaseName + "      $$$$$$$$$$$$$$$$$$$$$$$");
-		Log.info("****************************************************************************************");
+		Log.info("$$$$$$$$$$$$$$$$$$$$$    " + "-START-" + sTestCaseName + "    $$$$$$$$$$$$$$$$$$$$$$$");
 	}
 
 	/**
@@ -35,7 +33,7 @@ public class LogClass {
 	 */
 
 	public static void endTestCase(String sTestCaseName) {
-		Log.info("XXXXXXXXXXXXXXXXXXXXXXX             " + "-E---N---D-" + "             XXXXXXXXXXXXXXXXXXXXXX");
+		Log.info("XXXXXXXXXXXXXXXXXXXXXXX    " + "-END-" + sTestCaseName + "    XXXXXXXXXXXXXXXXXXXXXXX");
 	}
 
 	/**
@@ -45,9 +43,7 @@ public class LogClass {
 	 */
 
 	public static void info(String message) {
-
 		Log.info(message);
-
 	}
 
 	/**
@@ -56,9 +52,7 @@ public class LogClass {
 	 * @param message message to be displayed
 	 */
 	public static void warn(String message) {
-
 		Log.warn(message);
-
 	}
 
 	/**
@@ -67,9 +61,7 @@ public class LogClass {
 	 * @param message message to be displayed
 	 */
 	public static void error(String message) {
-
 		Log.error(message);
-
 	}
 
 	/**
@@ -78,9 +70,7 @@ public class LogClass {
 	 * @param message message to be displayed
 	 */
 	public static void fatal(String message) {
-
 		Log.fatal(message);
-
 	}
 
 	/**
@@ -89,9 +79,7 @@ public class LogClass {
 	 * @param message message to be displayed
 	 */
 	public static void debug(String message) {
-
 		Log.debug(message);
-
 	}
 
 }

@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCases.addToCartWithLogin" class="method navigator-link" hash-for-method="TC01_loginTest">TC01_loginTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCases.addToCartWithLogin" class="method navigator-link" hash-for-method="TC02_add_To_Cart">TC02_add_To_Cart</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCases.AddToCartFunctionality" class="method navigator-link" hash-for-method="TC01_add_To_Cart">TC01_add_To_Cart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -125,23 +120,23 @@
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">testCases.addToCartWithLogin</span>
+              <span class="class-name">testCases.AddToCartFunctionality</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC01_loginTest">
-                  </a> <!-- TC01_loginTest -->
-                  <span class="method-name">TC01_loginTest</span>
+                  <a name="TC01_add_To_Cart">
+                  </a> <!-- TC01_add_To_Cart -->
+                  <span class="method-name">TC01_add_To_Cart</span>
                   <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:10df:a55:1c7:c215%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
     at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
     at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:10df:a55:1c7:c215%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
 	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
@@ -156,13 +151,14 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:95)
-	at utility.baseFunctionalities.capabilities(baseFunctionalities.java:194)
-	at utility.baseFunctionalities.setUpDriver(baseFunctionalities.java:106)
+	at pageObjects.BasePage.getDriver(BasePage.java:155)
+	at pageObjects.BasePage.initialization(BasePage.java:89)
+	at testCases.AddToCartFunctionality.setUp(AddToCartFunctionality.java:53)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
-	... 40 more
+	... 39 more
 Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:10df:a55:1c7:c215%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
     at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
@@ -180,18 +176,8 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	... 45 more
-... Removed 36 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC02_add_To_Cart">
-                  </a> <!-- TC02_add_To_Cart -->
-                  <span class="method-name">TC02_add_To_Cart</span>
-                  <div class="stack-trace">java.lang.Throwable: Method addToCartWithLogin.TC02_add_To_Cart()[pri:0, instance:testCases.addToCartWithLogin@4d154ccd] depends on not successfully finished methods
-... Removed 18 stack frames
+	... 44 more
+... Removed 34 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -207,9 +193,12 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utility.Listeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.addToCartWithLogin&quot;/&gt;
+      &lt;class name=&quot;testCases.AddToCartFunctionality&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -249,15 +238,11 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC02_add_To_Cart')
-data.setCell(0, 2, 'testCases.addToCartWithLogin')
+data.setCell(0, 1, 'TC01_add_To_Cart')
+data.setCell(0, 2, 'testCases.AddToCartFunctionality')
 data.setCell(0, 3, 0);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC01_loginTest')
-data.setCell(1, 2, 'testCases.addToCartWithLogin')
-data.setCell(1, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -288,25 +273,17 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.addToCartWithLogin</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">setupSuite</span>
+              <div class="chronological-class-name">testCases.AddToCartFunctionality</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">TC01_add_To_Cart</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-class before">
+              </div> <!-- test-method -->
+              <div class="configuration-test before">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">setUpDriver</span>
-                <span class="method-start">3210 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-suite after">
-                <span class="method-name">endSuite</span>
-                <span class="method-start">3840 ms</span>
-              </div> <!-- configuration-suite after -->
-              <div class="test-method">
-                <span class="method-name">TC01_loginTest</span>
-                <span class="method-start">-1592852936753 ms</span>
-              </div> <!-- test-method -->
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

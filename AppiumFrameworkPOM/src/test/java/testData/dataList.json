@@ -5,22 +5,16 @@
             { 
                "username":"7005683728",
                "password":"Welcome@123",
-               "FirstLastName":"Dipanjan",
-               "userToCall":"",
-               "firstName":"",
-               "lastName":"",
+               "Name":"Dipanjan",
                "companyName":"Wipro",
                "phoneNumber":"4087215871",
-               "iphoneContactFormat":"(408) 721-5871",
-               "emailAddress":"dipanjan.choudhury@usfoods.com",
+               "emailAddress":"dipanjan.choudhury@wipro.com",
                "street":"neeladri road",
                "city":"Bangalore",
                "state":"Karnataka",
                "zip":"560100",
                "jobTitle":"Automation Engineer",
-               "SearchText":"65-inch TV",
-               "dialNum":"918971966679",
-               "personalNumber":"+9197470028731"
+               "SearchText":"65-inch TV"
             }
          ]
       }

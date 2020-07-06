@@ -1,20 +1,34 @@
-[INFO ] 2020-06-30 01:26:32.253 [main] LogClass - Execution started
-[INFO ] 2020-06-30 01:26:32.316 [main] LogClass - Extent Report initialized
-[INFO ] 2020-06-30 01:26:32.316 [main] LogClass - Starting server
-[INFO ] 2020-06-30 01:26:34.656 [main] LogClass - ****************************************************************************************
-[INFO ] 2020-06-30 01:26:34.656 [main] LogClass - $$$$$$$$$$$$$$$$$$$$$              AddToCartFunctionality      $$$$$$$$$$$$$$$$$$$$$$$
-[INFO ] 2020-06-30 01:26:34.656 [main] LogClass - ****************************************************************************************
-[INFO ] 2020-06-30 01:26:42.211 [main] LogClass - Driver has been created
-[INFO ] 2020-06-30 01:26:42.218 [main] LogClass - Test caseTC01_add_To_Cart started
-[INFO ] 2020-06-30 01:26:43.816 [main] LogClass - Validating the login page elements
-[INFO ] 2020-06-30 01:26:43.933 [main] LogClass - Element skipLogin  clicked
-[INFO ] 2020-06-30 01:26:47.159 [main] LogClass - Element searchBox  clicked
-[INFO ] 2020-06-30 01:26:51.290 [main] LogClass - Entered the text65-inch TVin the field searchBox
-[INFO ] 2020-06-30 01:26:52.592 [main] LogClass - Performed click on enter key
-[INFO ] 2020-06-30 01:26:52.592 [main] LogClass - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[3]/android.widget.TextView})
-[INFO ] 2020-06-30 01:27:02.963 [main] LogClass - Test case TC01_add_To_Cart is failed
-[INFO ] 2020-06-30 01:27:04.177 [main] LogClass - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-[INFO ] 2020-06-30 01:27:04.521 [main] LogClass - Driver has been destroyed
-[INFO ] 2020-06-30 01:27:04.521 [main] LogClass - Stopping server
-[INFO ] 2020-06-30 01:27:06.596 [main] LogClass - Server stopped
-[INFO ] 2020-06-30 01:27:06.621 [main] LogClass - Execution Finished
+[INFO ] 2020-07-06 15:55:39.211 [main] LogClass - Execution started
+[INFO ] 2020-07-06 15:55:39.290 [main] LogClass - Extent Report initialized
+[INFO ] 2020-07-06 15:55:39.291 [main] LogClass - Starting server
+[INFO ] 2020-07-06 15:55:41.655 [main] LogClass - $$$$$$$$$$$$$$$$$$$$$    -START-AddToCartWithLogin    $$$$$$$$$$$$$$$$$$$$$$$
+[INFO ] 2020-07-06 15:55:49.793 [main] LogClass - Driver has been created
+[INFO ] 2020-07-06 15:55:49.804 [main] LogClass - Test caseloginTest started
+[INFO ] 2020-07-06 15:55:49.811 [main] LogClass - Welcome Page will display
+[INFO ] 2020-07-06 15:55:51.344 [main] LogClass - Element signIn Button  clicked
+[INFO ] 2020-07-06 15:55:56.346 [main] LogClass - Entered the text7005683728in the field Username Field
+[INFO ] 2020-07-06 15:55:57.085 [main] LogClass - Element Continue Button  clicked
+[INFO ] 2020-07-06 15:56:00.465 [main] LogClass - Entered the textWelcome@123in the field Password Field
+[INFO ] 2020-07-06 15:56:01.879 [main] LogClass - Element SignIn Submit button  clicked
+[INFO ] 2020-07-06 15:56:13.004 [main] LogClass - Element English Language RadioButton  clicked
+[INFO ] 2020-07-06 15:56:14.156 [main] LogClass - Element Save Changes  clicked
+[INFO ] 2020-07-06 15:56:14.157 [main] LogClass - Test case loginTest is passed
+[INFO ] 2020-07-06 15:56:16.355 [main] LogClass - Test caseaddToCartFunctionality started
+[INFO ] 2020-07-06 15:56:16.660 [main] LogClass - Element Search Box  clicked
+[INFO ] 2020-07-06 15:56:21.184 [main] LogClass - Entered the text65-inch TVin the field Entering Search Text
+[INFO ] 2020-07-06 15:56:23.817 [main] LogClass - Performed click on enter key
+[INFO ] 2020-07-06 15:56:23.817 [main] LogClass - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_item_styled_byline'])[3]/android.widget.TextView})
+[INFO ] 2020-07-06 15:56:25.995 [main] LogClass - Company Name =TCL
+[INFO ] 2020-07-06 15:56:25.995 [main] LogClass - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/item_title'])[3]})
+[INFO ] 2020-07-06 15:56:26.961 [main] LogClass - Product Name =TCL 163.96 cm (65 inches)  AI 4K UHD Certified Android Smart LED TV 65P8 (Black) (2019 Model)
+[INFO ] 2020-07-06 15:56:26.961 [main] LogClass - Getting text from the field Located by By.chained({By.xpath: (//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[3]/android.widget.TextView})
+[INFO ] 2020-07-06 15:56:27.447 [main] LogClass - Product Price =51990
+[INFO ] 2020-07-06 15:56:30.133 [main] LogClass - Element Product from ProductList  clicked
+[INFO ] 2020-07-06 15:56:40.738 [main] LogClass - Getting text from the field Located by By.chained({By.xpath: //android.view.View[@resource-id='atfRedesign_priceblock_priceToPay']/android.widget.EditText})
+[INFO ] 2020-07-06 15:56:41.584 [main] LogClass - Screen Orientation changed to LANDSCAPE
+[ERROR] 2020-07-06 15:56:52.510 [main] LogClass - Test case addToCartFunctionality is failed
+[INFO ] 2020-07-06 15:56:56.889 [main] LogClass - XXXXXXXXXXXXXXXXXXXXXXX    -END-AddToCartWithLogin    XXXXXXXXXXXXXXXXXXXXXXX
+[INFO ] 2020-07-06 15:56:58.008 [main] LogClass - Driver has been destroyed
+[INFO ] 2020-07-06 15:56:58.008 [main] LogClass - Stopping server
+[INFO ] 2020-07-06 15:57:00.075 [main] LogClass - Server stopped
+[INFO ] 2020-07-06 15:57:00.102 [main] LogClass - Execution Finished
