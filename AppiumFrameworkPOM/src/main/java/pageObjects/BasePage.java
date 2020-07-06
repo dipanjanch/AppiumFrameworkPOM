@@ -155,11 +155,15 @@ public class BasePage {
 		report.attachReporter(extent);
 		LogClass.info("Extent Report initialized");
 	}
-	
-	public void startTestCase(String testName)
-	{
+
+	/**
+	 * This method is used to start reporting in the extent report
+	 * 
+	 * @param testName : The name of the test method
+	 */
+	public void startTestCase(String testName) {
 		reporter = report.createTest(testName);
-		reporter.info("Strat Testcase " +testName) ;
+		reporter.info("Strat Testcase " + testName);
 	}
 
 	/**
@@ -224,7 +228,7 @@ public class BasePage {
 	 * Method to set the value in the text box based on locator
 	 * 
 	 * @param element            : WebElement element to pass the locator.
-	 * @param value                : value to type in Mobile element.
+	 * @param value              : value to type in Mobile element.
 	 * @param elementDescription : the element description.
 	 */
 	public void setValueToField(WebElement element, String value, String elementDescription) {
