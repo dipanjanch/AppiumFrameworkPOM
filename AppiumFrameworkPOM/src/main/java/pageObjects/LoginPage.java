@@ -58,7 +58,7 @@ public class LoginPage extends BasePage {
 	public WebElement saveChangesButton;
 
 	/**
-	 * 
+	 * This method is used for validating login page elements
 	 */
 	public void validateLoginPageElements() {
 		Assert.assertTrue(isElementDisplayed(signinButton), "Validating SignIn Button");
