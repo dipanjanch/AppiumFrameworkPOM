@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCases.AddToCartFunctionality" class="method navigator-link" hash-for-method="TC01_add_To_Cart">TC01_add_To_Cart</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCases.AddToCartWithLogin" class="method navigator-link" hash-for-method="addToCartFunctionality">addToCartFunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testCases.AddToCartWithLogin" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -120,23 +125,34 @@
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">testCases.AddToCartFunctionality</span>
+              <span class="class-name">testCases.AddToCartWithLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC01_add_To_Cart">
-                  </a> <!-- TC01_add_To_Cart -->
-                  <span class="method-name">TC01_add_To_Cart</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+                  <a name="addToCartFunctionality">
+                  </a> <!-- addToCartFunctionality -->
+                  <span class="method-name">addToCartFunctionality</span>
+                  <div class="stack-trace">java.lang.Throwable: Method AddToCartWithLogin.addToCartFunctionality()[pri:0, instance:testCases.AddToCartWithLogin@6c1a5b54] depends on not successfully finished methods
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest">
+                  </a> <!-- loginTest -->
+                  <span class="method-name">loginTest</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
 	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
@@ -151,18 +167,19 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:95)
-	at pageObjects.BasePage.getDriver(BasePage.java:155)
-	at pageObjects.BasePage.initialization(BasePage.java:89)
-	at testCases.AddToCartFunctionality.setUp(AddToCartFunctionality.java:53)
+	at pageObjects.BasePage.getDriver(BasePage.java:137)
+	at pageObjects.BasePage.initialization(BasePage.java:71)
+	at testCases.AddToCartWithLogin.setUp(AddToCartWithLogin.java:45)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
 	... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -198,7 +215,7 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.AddToCartFunctionality&quot;/&gt;
+      &lt;class name=&quot;testCases.AddToCartWithLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -238,11 +255,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC01_add_To_Cart')
-data.setCell(0, 2, 'testCases.AddToCartFunctionality')
+data.setCell(0, 1, 'addToCartFunctionality')
+data.setCell(0, 2, 'testCases.AddToCartWithLogin')
 data.setCell(0, 3, 0);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginTest')
+data.setCell(1, 2, 'testCases.AddToCartWithLogin')
+data.setCell(1, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -273,9 +294,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.AddToCartFunctionality</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.AddToCartWithLogin</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">TC01_add_To_Cart</span>
+                <span class="method-name">loginTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test before">

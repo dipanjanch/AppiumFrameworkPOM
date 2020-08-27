@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/2</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 02 15:57:02 IST 2020</td>
+<td>Started on:</td><td>Mon Aug 24 13:44:37 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16002 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6822 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.AddToCartFunctionality.setUp()'><b>setUp</b><br>Test class: testCases.AddToCartFunctionality</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+<td title='testCases.AddToCartWithLogin.setUp()'><b>setUp</b><br>Test class: testCases.AddToCartWithLogin</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
 	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
@@ -99,18 +100,19 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:95)
-	at pageObjects.BasePage.getDriver(BasePage.java:155)
-	at pageObjects.BasePage.initialization(BasePage.java:89)
-	at testCases.AddToCartFunctionality.setUp(AddToCartFunctionality.java:53)
+	at pageObjects.BasePage.getDriver(BasePage.java:137)
+	at pageObjects.BasePage.initialization(BasePage.java:71)
+	at testCases.AddToCartWithLogin.setUp(AddToCartWithLogin.java:45)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
 	... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -125,16 +127,17 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
 	... 44 more
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1006727288", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1006727288'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1629759610", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1629759610'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
 	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
@@ -149,9 +152,9 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:95)
-	at pageObjects.BasePage.getDriver(BasePage.java:155)
-	at pageObjects.BasePage.initialization(BasePage.java:89)
-	at testCases.AddToCartFunctionality.setUp(AddToCartFunctionality.java:53)
+	at pageObjects.BasePage.getDriver(BasePage.java:137)
+	at pageObjects.BasePage.initialization(BasePage.java:71)
+	at testCases.AddToCartWithLogin.setUp(AddToCartWithLogin.java:45)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -183,13 +186,14 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
 	... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -210,8 +214,8 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
 	... 44 more
 </pre></div></td>
-<td>15</td>
-<td>testCases.AddToCartFunctionality@d86a6f</td></tr>
+<td>6</td>
+<td>testCases.AddToCartWithLogin@6c1a5b54</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -221,10 +225,10 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.AddToCartFunctionality.teardown()'><b>teardown</b><br>Test class: testCases.AddToCartFunctionality</td>
+<td title='testCases.AddToCartWithLogin.teardown()'><b>teardown</b><br>Test class: testCases.AddToCartWithLogin</td>
 <td></td>
 <td>0</td>
-<td>testCases.AddToCartFunctionality@d86a6f</td></tr>
+<td>testCases.AddToCartWithLogin@6c1a5b54</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -234,16 +238,43 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.AddToCartFunctionality.TC01_add_To_Cart()'><b>TC01_add_To_Cart</b><br>Test class: testCases.AddToCartFunctionality</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+<td title='testCases.AddToCartWithLogin.addToCartFunctionality()'><b>addToCartFunctionality</b><br>Test class: testCases.AddToCartWithLogin</td>
+<td><div><pre>java.lang.Throwable: Method AddToCartWithLogin.addToCartFunctionality()[pri:0, instance:testCases.AddToCartWithLogin@6c1a5b54] depends on not successfully finished methods
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace666911607", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace666911607'><pre>java.lang.Throwable: Method AddToCartWithLogin.addToCartFunctionality()[pri:0, instance:testCases.AddToCartWithLogin@6c1a5b54] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>null</td></tr>
+<tr>
+<td title='testCases.AddToCartWithLogin.loginTest()'><b>loginTest</b><br>Test class: testCases.AddToCartWithLogin</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
 	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
@@ -258,18 +289,19 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:95)
-	at pageObjects.BasePage.getDriver(BasePage.java:155)
-	at pageObjects.BasePage.initialization(BasePage.java:89)
-	at testCases.AddToCartFunctionality.setUp(AddToCartFunctionality.java:53)
+	at pageObjects.BasePage.getDriver(BasePage.java:137)
+	at pageObjects.BasePage.initialization(BasePage.java:71)
+	at testCases.AddToCartWithLogin.setUp(AddToCartWithLogin.java:45)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
 	... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
 	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
 	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
@@ -284,16 +316,17 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
 	... 44 more
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace806738808", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace806738808'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1572820532", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1572820532'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
 	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
@@ -308,9 +341,9 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:95)
-	at pageObjects.BasePage.getDriver(BasePage.java:155)
-	at pageObjects.BasePage.initialization(BasePage.java:89)
-	at testCases.AddToCartFunctionality.setUp(AddToCartFunctionality.java:53)
+	at pageObjects.BasePage.getDriver(BasePage.java:137)
+	at pageObjects.BasePage.initialization(BasePage.java:71)
+	at testCases.AddToCartWithLogin.setUp(AddToCartWithLogin.java:45)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -342,13 +375,14 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
 	... 39 more
-Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;fe80:0:0:0:8b1:b2:848f:c8ed%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
+System info: host: &apos;C02YQGKGLVCF&apos;, ip: &apos;2405:201:ae00:5734:d930:485:ec77:a8fb%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.5&apos;, java.version: &apos;12.0.2&apos;
 Driver info: driver.version: AndroidDriver
-remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not find adb Please set the ANDROID_HOME environment variable with the Android SDK root directory path.
-    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
-    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device c88df41a was not in the list of connected devices
+    at getResponseForW3CError (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/errors.js:826:9)
+    at asyncHandler (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-base-driver/lib/protocol/protocol.js:447:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -370,7 +404,7 @@ remote stacktrace: UnknownError: An unknown server-side error occurred while pro
 	... 44 more
 </pre></div></td>
 <td>0</td>
-<td>testCases.AddToCartFunctionality@d86a6f</td></tr>
+<td>testCases.AddToCartWithLogin@6c1a5b54</td></tr>
 </table><p>
 </body>
 </html>
