@@ -130,6 +130,7 @@ public class BasePage {
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device);
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("udid", UDID);
+		capabilities.setCapability("noReset", true);
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
 		capabilities.setCapability("appPackage", appPackage);

@@ -6,7 +6,7 @@
 	</listeners>
 	<test name="Test">
 		<classes>
-			<class name="testCases.AddToCartWithLogin" />
+			<class name="testCases.TC01_Verify_user_can_create_the_List" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -45,6 +45,10 @@ public class HomePage extends BasePage {
 	public WebElement productNameField;
 	@AndroidFindBy(xpath = "(//*[@resource-id='com.amazon.mShop.android.shopping:id/rs_results_styled_price_v2'])[3]/android.widget.TextView")
 	public WebElement productPriceField;
+	@AndroidFindBy(xpath = "")
+	public WebElement hamburgerMenu;
+	@AndroidFindBy(xpath = "")
+	public WebElement yourWishList;
 
 	/**
 	 * This method enters the search text
@@ -95,6 +99,13 @@ public class HomePage extends BasePage {
 		productPrice = getProductPrice();
 		LogClass.info("Product Price =" + productPrice);
 		reporter.pass("Getting ProductDetails from product list");
+	}
+	
+	public void clickYourWishList() throws InterruptedException
+	{
+		waitForElementPresent(hamburgerMenu);
+		clickElement(hamburgerMenu, "hamburgerMenu");
+		clickElement(yourWishList, "Your WishList");
 	}
 
 }
